@@ -1,0 +1,22 @@
+python3 -m venv myvenv -> código para criar uma virtual env nova, myvenv é o nome.
+
+source myvenv/bin/activate -> para ativar a myvenv no linux
+
+python -m pip install --upgrade pip -> atualizar pip para ultima versão
+
+pip install -r requirements.txt -> instalar o django na virtual venv
+
+django-admin startproject controle_gastos . -> para criar um novo projeto em django, controle_gastos é o nome do projeto
+
+django-admin startapp contas -> para criar uma nova app no sistema
+
+python manage.py makemigrations -> prepara as atualizações da tabela para migração
+
+python manage.py migrate -> para criar um banco de dados ou atualiza-lo
+
+python manage.py createsuperuser -> para criar um super usuário novo
+
+python manage.ppy runserver -> para rodar o projeto
+
+
+
