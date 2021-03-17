@@ -20,5 +20,6 @@ from contas.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', listagem),
+    path('nova/', nova_transacao),
     path('home/', home),
 ]
