@@ -1,8 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from .form import *
 import datetime
-
 
 def home(request):
     data = {}
@@ -16,11 +15,27 @@ def listagem(request):
     return render(request, 'contas/listagem.html', data)
 
 def nova_transacao(request):
-    data = {}
+    
     form = TransacaoForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return listagem(request)
+        return redirect('listagem')
 
-    data['form'] = form
-    return render(request, 'contas/form.html', data)
+    context = {
+        'form': form
+    }
+
+    return render(request, 'contas/form.html', form)
+
+def update(request, pk):
+    transacao = Transacao.objects.get(pk=pk)
+    form = TransacaoForm(request.POST or None, instance=transacao)
+    if form.is_valid():
+        form.save()
+        return redirect('listagem')
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'contas/form.html', context)
