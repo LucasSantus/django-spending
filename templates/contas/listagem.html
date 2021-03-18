@@ -19,14 +19,11 @@
                     <a href="{% url 'update' transacao.id %}">
                         <div class="col s12 m6 l3">
                             <div class="card-panel blue card-shaper" style="border-radius: 15px 15px; width: auto">
-                                
                                     <span class="white-text"> 
                                         <i class="medium material-icons">{{ transacao.descricao }}</i>
                                         </br>{{ transacao.data }}
                                     </span>
                                     {{ transacao.valor }}
-                                
-                                <a href="{% url 'nova_transacao' %}">Novo</a>
                             </div>
                         </div>
                     </a>

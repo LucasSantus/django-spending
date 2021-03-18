@@ -33,12 +33,12 @@
             <nav>
                 <div class="nav-wrapper">
                     <a href="#!" class="brand-logo" style="font-size: 40px; padding-left: 10px;"><span>Logo</span></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-                </ul>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <!-- Dropdown Trigger -->
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -47,6 +47,13 @@
     <main>
         {% block content %}
         {% endblock %}
+
+        <div class="fixed-action-btn">
+            <a href="{% url 'nova_transacao' %}" class="btn-floating btn-large red">
+              <i class="large material-icons">add</i>
+            </a>
+        </div>
+        
     </main>
 
     <footer class="page-footer purple lighten-1">
