@@ -1,14 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
+
         <!-- Import Material Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- Import css estilizado -->
-        <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen,projection" />
 
-        <!-- Import Materialize -->
-        <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+        <!-- css interno -->
+        <link rel="stylesheet" href="{% static 'css/brinquedoteca.css' %}">
 
         <!-- mImport Java Script -->
         <script src="js/index.js" defer></script>
@@ -19,221 +22,42 @@
 
   <body>
     <header>
-        <nav class="nav-extended">
-      
-            <div class="nav-wrapper center-align purple">
-                <span class="white-text">Sem Ideia </span>
-            </div>
-            
-            <div class="nav-wrapper purple lighten-1">
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#time">Team</a></li>
-                    <li><a href="#projeto">Project</a></li>
-                    <li><a href="#sobre">About</a></li>
-                    <li><a href="#contato">Contact</a></li>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo" style="font-size: 40px; padding-left: 10px;"><span>Logo</span></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
-            </div>
-        </nav>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <div id="sliders" class="slider">
-                <ul class="slides">
-                    <li>
-                        <img src="images/download.jpeg">
-                        <div class="caption center-align">
-                            <h3 class="purple-text">This is our big Tagline!</h3>
-                            <h5 class="light purple-text text-lighten-3">Here's our small slogan.</h5>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="images/download.jpeg">
-                        <div class="caption left-align">
-                            <h3 class="purple-text">Left Aligned Caption</h3>
-                            <h5 class="purple-text text-lighten-1">Here's our small slogan.</h5>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="images/download.jpeg">
-                        <div class="caption right-align">
-                            <h3 class="purple-text">Right Aligned Caption</h3>
-                            <h5 class="purple-text text-lighten-1">Here's our small slogan.</h5>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <img src="images/download.jpeg">
-                        <div class="caption bottom-align">
-                            <h3 class="purple-text">This is our big Tagline!</h3>
-                            <h5 class="purple-text text-lighten-1">Here's our small slogan.</h5>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section>      
-            <div id="time" class="container center">
-                <h1 class="purple-text">Our Team</h1>
-                <div class="row">
-                    <div class="col s4">
-                        <div class="card-panel purple lighten-2 ">
-                            <div class="row valign-wrapper">
-                                <div class="col s2">
-                                    <img src="images/download.jpeg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                </div>
-                                <div class="col s10">
-                                    <span class="white-text">
-                                        This is a square image. Add the "circle" class to it to make it appear circular.
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col s4">
-                        <div class="card-panel purple lighten-2 ">
-                            <div class="row valign-wrapper">
-                                <div class="col s2">
-                                    <img src="images/download.jpeg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                </div>
-                                <div class="col s10">
-                                    <span class="white-text">
-                                        This is a square image. Add the "circle" class to it to make it appear circular.
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col s4">
-                        <div class="card-panel purple lighten-2 ">
-                            <div class="row valign-wrapper">
-                                <div class="col s2">
-                                    <img src="images/download.jpeg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                </div>
-                                <div class="col s10">
-                                    <span class="white-text">
-                                        This is a square image. Add the "circle" class to it to make it appear circular.
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div id="projeto" class="container center">
-                <h1 class="purple-text">Our Projects</h1>
-                <div class="row">
-
-                    <ul class="demo-3">
-                        <li>
-                            <figure>
-                                <img src="images/download.jpeg" class="responsive-img" alt="">
-                                <figcaption>
-                                    <h2>Project title</h2>           
-                                </figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-
-                    <ul class="demo-3">
-                        <li>
-                            <figure>
-                                <img src="images/download.jpeg" class="responsive-img" alt="">
-                                <figcaption>
-                                    <h2>Project title</h2>           
-                                </figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-
-                    <ul class="demo-3">
-                        <li>
-                            <figure>
-                                <img src="images/download.jpeg" class="responsive-img" alt="">
-                                <figcaption>
-                                    <h2>Project title</h2>           
-                                </figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-                </div>
-                <a class="waves-effect waves-light btn">VIEW MORE</a>
-            </div>
-        </section>
-
-        <section>
-            <div id="sobre" class="parallax-container">
-                <div class="parallax"><img src="images/download.jpeg"></div>
-                <div class="container center">
-                    <h1 class="purple-text">About Us</h1>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                </div>
-              </div>
-        </section>
-
-        <section>
-            <div id="contato" class="container center">
-                <h1 class="purple-text">Contact us</h1>
-    
-                <div class="container">
-                    <span>
-                        There are many variations of passages of Lorem Ipsum available, but the majority have 
-                        suffered alteration in some form, by injected humour, or randomised words which don't 
-                        look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need 
-                        to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem 
-                        Ipsum generators on the Internet tend to repeat predefined chunks as necessary
-                    </span>
-                    <div class="row">
-                        <form class="col s12">
-                            
-                            <div class="input-field col s6">
-                                <input id="name" type="text" class="validate">
-                                <label for="name">Your Name</label>
-                            </div>
-
-                            <div class="input-field col s6">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Your Email</label>
-                            </div>
-
-                            <div class="input-field col s12">
-                                <input id="message-sub" type="email" class="validate">
-                                <label for="message-sub">Message Subject</label>
-                            </div>
-
-                            <div class="input-field col s12">
-                                <textarea id="text_area" class="materialize-textarea"></textarea>
-                                <label for="text_area">Your Message</label>
-                            </div>
-                            
-                            <button class="btn waves-effect waves-light purple" type="submit" name="action">SEND MESSAGE
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {% block content %}
+        {% endblock %}
     </main>
 
     <footer class="page-footer purple lighten-1">
         <div class="footer-copyright purple">
             <div class="container">
-                Copyright © 2021 Lucas Eduardo de Oliveira Santos
+                Copyright © 2021 Sem Ideia
                 <a class="white-text text-lighten-3 right" href="#!">More Links</a>
             </div>
     </footer>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
   </body>
 </html>
