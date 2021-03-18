@@ -9,5 +9,4 @@ urlpatterns = [
     path('nova/', views.nova_transacao, name='nova_transacao'),
     path('update/<int:pk>', views.update, name='update'),
     path('delete/<int:pk>', views.delete, name='delete')
-
 ]
