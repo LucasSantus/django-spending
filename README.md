@@ -1,6 +1,6 @@
 ## Controle de Gastos
 
-__repositório focado em estudos__
+_Repositório Focado em Estudos_
 
 **Clonando o Repositório**
 
