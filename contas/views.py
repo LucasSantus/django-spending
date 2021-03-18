@@ -15,17 +15,16 @@ def listagem(request):
     return render(request, 'contas/listagem.html', data)
 
 def nova_transacao(request):
-    
     form = TransacaoForm(request.POST or None)
     if form.is_valid():
         form.save()
         return redirect('listagem')
 
     context = {
-        'form': form
+        'form': form,
     }
 
-    return render(request, 'contas/form.html', form)
+    return render(request, 'contas/form.html', context)
 
 def update(request, pk):
     transacao = Transacao.objects.get(pk=pk)
@@ -35,7 +34,14 @@ def update(request, pk):
         return redirect('listagem')
 
     context = {
-        'form': form
+        'form': form,
+        'transacao': transacao
     }
 
     return render(request, 'contas/form.html', context)
+
+def delete(request, pk):
+    transacao = Transacao.objects.get(pk=pk)
+    transacao.delete()
+
+    return redirect('listagem')
