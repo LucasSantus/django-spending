@@ -1,5 +1,7 @@
 ## Controle de Gastos
 
+*** repositório focado em estudos ***
+
 **Clonando o Repositório**
 
 Dentro da pasta onde o projeto irá ficar armazenado, abra o terminal PowerShell (opcional, qualquer terminal funcionará), {Shift + Botão Direito Mouse}
@@ -38,5 +40,4 @@ $ python manage.py createsuperuser
 $ python manage.ppy runserver
 ```
 
-para visualizar o projeto:
-http://127.0.0.1:8000/
+para visualizar o projeto: http://127.0.0.1:8000/
