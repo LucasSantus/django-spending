@@ -10,9 +10,10 @@ def home(request):
     return render(request, 'contas/home.html', data)
 
 def listagem(request):
-    data = {}
-    data['transacoes'] = Transacao.objects.all()
-    return render(request, 'contas/listagem.html', data)
+    context = {
+        'transacoes': Transacao.objects.all()
+    }
+    return render(request, 'contas/listagem.html', context)
 
 def nova_transacao(request):
     form = TransacaoForm(request.POST or None)

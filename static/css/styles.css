@@ -2,6 +2,10 @@ body{
     margin: 0;
 }
 
+header .navbar-fixed nav .nav-wrapper{
+    background-color: #6689A1;
+}
+
 header nav a span{
     font-size: 500px;
 }
