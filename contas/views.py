@@ -3,7 +3,7 @@ from .models import *
 from .form import *
 import datetime
 
-def home(request):
+def index(request):
     categorias = Categoria.objects.all()
 
     context = {
@@ -11,23 +11,23 @@ def home(request):
         'data': datetime.datetime.now()
     }
 
-    return render(request, 'contas/home.html', context)
+    return render(request, 'contas/index.html', context)
 
-def listagem(request, pk):
-    categoria = Categoria.objects.filter(pk=pk)
+def categoria(request, pk):
+    categorias = Categoria.objects.filter(pk=pk)
     transacoes = Transacao.objects.filter(categoria = pk)
     
     context = {
-        'categoria': categoria,
+        'categorias': categorias,
         'transacoes': transacoes,
     }
-    return render(request, 'contas/listagem.html', context)
+    return render(request, 'contas/categoria.html', context)
 
-def nova_transacao(request):
+def new(request):
     form = TransacaoForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('listagem')
+        return redirect('categoria')
 
     context = {
         'form': form,
@@ -40,7 +40,7 @@ def update(request, pk):
     form = TransacaoForm(request.POST or None, instance=transacao)
     if form.is_valid():
         form.save()
-        return redirect('listagem')
+        return redirect('categoria')
 
     context = {
         'form': form,
@@ -53,4 +53,4 @@ def delete(request, pk):
     transacao = Transacao.objects.get(pk=pk)
     transacao.delete()
 
-    return redirect('listagem')
+    return redirect('categoria')

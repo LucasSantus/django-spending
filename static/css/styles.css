@@ -24,5 +24,12 @@ body{
 .card-shaper{
     background-color: #9dad7f;
     border-radius: 20px 20px; 
-    width: auto
+    font-size: 18px;
+    display:grid;
+    align-items: center;
+    
+    font-size: 21px; 
+    padding-top: 1%; 
+    width: auto;
+    height: 130px;
 }

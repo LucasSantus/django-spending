@@ -15,10 +15,9 @@
                     <h1>Seja bem-vindo</h1>
                     <ul>
                         {% for categoria in categorias %}
-                        {% for categoria in categorias %}
-                            <a href="{% url 'listagem' pk=categoria.id %}">
+                            <a href="{% url 'categoria' pk=categoria.id %}">
                                 <div class="container">
-                                    <div class="col s12 m6 l3">
+                                    <div class="col s12 m6">
                                         <div class="card-panel card-shaper center">
                                             <span class="white-text">
                                                 </br>{{ categoria.nome }}
@@ -27,7 +26,6 @@
                                     </div>
                                 </div>
                             </a>
-                        {% endfor %}
                         {% endfor %}
                     </ul>
                 </div>
