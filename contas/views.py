@@ -4,14 +4,22 @@ from .form import *
 import datetime
 
 def home(request):
-    data = {}
-    data['transacoes'] = ['t1', 't2', 't3']
-    data['row'] = datetime.datetime.now()
-    return render(request, 'contas/home.html', data)
+    categorias = Categoria.objects.all()
 
-def listagem(request):
     context = {
-        'transacoes': Transacao.objects.all()
+        'categorias': categorias,
+        'data': datetime.datetime.now()
+    }
+
+    return render(request, 'contas/home.html', context)
+
+def listagem(request, pk):
+    categoria = Categoria.objects.filter(pk=pk)
+    transacoes = Transacao.objects.filter(categoria = pk)
+    
+    context = {
+        'categoria': categoria,
+        'transacoes': transacoes,
     }
     return render(request, 'contas/listagem.html', context)
 

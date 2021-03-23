@@ -5,13 +5,21 @@
         <div class="container">
             <h1>Seja bem-vindo</h1>
             <ul>
-                {% for transacao in transacoes %}
-                {% if transacao == "ti" %}
-                    <li><b>{{ transacao }}</b></li>
-                {% else %}    
-                    <li>{{ transacao }}</li>
-                {% endif %}
-            {% endfor %}
+                {% for categoria in categorias %}
+                <a href="{% url 'listagem' pk=categoria.id %}">
+                        <div class="container">
+                            <div class="col s12 m6 l3">
+                                <div class="card-panel blue card-shaper" style="border-radius: 15px 15px; width: auto">
+                                    <center>
+                                        <span class="white-text">
+                                            </br>{{ categoria.nome }}
+                                        </span>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
             </ul>
         </div>
     </section>
