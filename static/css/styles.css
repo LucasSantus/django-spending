@@ -21,15 +21,23 @@ body{
     background-color: #9dad7f;
 }
 
+.card-shaper-title{
+    background-color: #557934;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px; 
+    margin-top: 3%;
+    border-radius: 20px 20px; 
+    width: auto
+}
+
 .card-shaper{
     background-color: #9dad7f;
     border-radius: 20px 20px; 
-    font-size: 18px;
-    display:grid;
+    display: grid;
     align-items: center;
-    
     font-size: 21px; 
     padding-top: 1%; 
     width: auto;
-    height: 130px;
+    height: 150px;
 }

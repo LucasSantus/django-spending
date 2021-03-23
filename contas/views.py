@@ -13,7 +13,7 @@ def index(request):
 
     return render(request, 'contas/index.html', context)
 
-def categoria(request, pk):
+def transacao(request, pk):
     categorias = Categoria.objects.filter(pk=pk)
     transacoes = Transacao.objects.filter(categoria = pk)
     
@@ -21,7 +21,18 @@ def categoria(request, pk):
         'categorias': categorias,
         'transacoes': transacoes,
     }
-    return render(request, 'contas/categoria.html', context)
+    return render(request, 'contas/transacao.html', context)
+
+def detalhe_transacao(request, pk):
+    categorias = Categoria.objects.filter(pk=pk)
+    transacoes = Transacao.objects.filter(categoria = pk)
+    
+    context = {
+        'categorias': categorias,
+        'transacoes': transacoes,
+    }
+    return render(request, 'contas/transacao.html', context)
+
 
 def new(request):
     form = TransacaoForm(request.POST or None)
@@ -40,7 +51,7 @@ def update(request, pk):
     form = TransacaoForm(request.POST or None, instance=transacao)
     if form.is_valid():
         form.save()
-        return redirect('categoria')
+        return redirect('transacao')
 
     context = {
         'form': form,
@@ -53,4 +64,4 @@ def delete(request, pk):
     transacao = Transacao.objects.get(pk=pk)
     transacao.delete()
 
-    return redirect('categoria')
+    return redirect('transacao')
