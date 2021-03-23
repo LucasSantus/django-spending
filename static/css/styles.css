@@ -21,6 +21,10 @@ body{
     background-color: #9dad7f;
 }
 
+.btn-floating:hover{
+    background-color: #557144;
+}
+
 .card-shaper-title{
     background-color: #557934;
     align-items: center;
@@ -40,4 +44,8 @@ body{
     padding-top: 1%; 
     width: auto;
     height: 150px;
+}
+
+.card-shaper:hover{
+    background-color: black;
 }
