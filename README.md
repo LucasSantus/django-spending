@@ -12,7 +12,7 @@ $ git init
 $ git clone https://github.com/LucasSantus/controle-gastos.git
 ```
 
-** Preparando Ambiente Virtual **
+**Preparando Ambiente Virtual**
 
 Com o terminal aberto, digite:
 
@@ -26,7 +26,7 @@ $ python -m pip install --upgrade pip
 $ pip install -r requirements.txt
 ```
 
-** Preparando o Projeto **
+**Preparando o Projeto**
 
 ```
 $ python manage.py migrate
@@ -34,7 +34,7 @@ $ python manage.py migrate
 $ python manage.py createsuperuser
 ```
 
-** Rodando o Projeto **
+**Rodando o Projeto**
 
 ```
 $ python manage.ppy runserver
