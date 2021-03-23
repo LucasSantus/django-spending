@@ -37,7 +37,7 @@ $ python manage.py createsuperuser
 **Rodando o Projeto**
 
 ```
-$ python manage.ppy runserver
+$ python manage.py runserver
 ```
 
 para visualizar o projeto: http://127.0.0.1:8000/
