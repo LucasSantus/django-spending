@@ -1,4 +1,4 @@
-## Nome do Projeto 
+## Controle de Gastos
 
 ![License](https://img.shields.io/github/license/LucasSantus/controle-gastos)
 ![Languages](https://img.shields.io/github/languages/count/LucasSantus/controle-gastos)
@@ -80,56 +80,14 @@ Para que o projeto funcione sem problemas, é necessário ter as ferramentas aba
 
 **Clonando o Repositório**
 
-Dentro da pasta onde o projeto irá ficar armazenado, abra o terminal PowerShell(opcional, qualquer terminal funcionará), Shift + Botão Direito Mouse
-
-```
-$ git init
-
-$ git clone https://github.com/LucasSantus/Nome_Repositorio.git
-```
-
-**Instalando Dependências**
-...
-
---------------------------------------------------------------------------------------
-
-### Rodando o Projeto
-
-** Criar títulos com o passo-a-passo correto de como deve ser feito para rodar o projeto **
-
---------------------------------------------------------------------------------------
-
-### Autor(es)
- 
-- **Lucas Santos:** [GitHub](https://github.com/LucasSantus)
-
-Caso tenha alguma dúvida ou deseja participar do projeto, entre em contato!
-
-E-mail: leos9877@gmail.com
- 
-Siga-me no github!
-
-Obrigado por me visitar e boa codificação!
-
---------------------------------------------------------------------------------------
-
-### License
-
-Este projeto está licenciado sob a Nome da Licença License - veja o [LICENSE.md](https://github.com/LucasSantus/Nome_Projeto/blob/master/LICENSE) para melhores detalhes.
-
-
-## Controle de Gastos
-
-_Repositório Focado em Estudos_
-
-**Clonando o Repositório**
-
 Dentro da pasta onde o projeto irá ficar armazenado, abra o terminal PowerShell (opcional, qualquer terminal funcionará), {Shift + Botão Direito Mouse}
 
 ```
 $ git init
 
 $ git clone https://github.com/LucasSantus/controle-gastos.git
+
+$ cd controle-gastos
 ```
 
 **Preparando Ambiente Virtual**
@@ -161,3 +119,23 @@ $ python manage.py runserver
 ```
 
 para visualizar o projeto: http://127.0.0.1:8000/
+
+--------------------------------------------------------------------------------------
+
+### Autor(es)
+ 
+- **Lucas Santos:** [GitHub](https://github.com/LucasSantus)
+
+Caso tenha alguma dúvida ou deseja participar do projeto, entre em contato!
+
+E-mail: leos9877@gmail.com
+ 
+Siga-me no github!
+
+Obrigado por me visitar e boa codificação!
+
+--------------------------------------------------------------------------------------
+
+### License
+
+Este projeto está licenciado sob a Nome da Licença License - veja o [LICENSE.md](https://github.com/LucasSantus/Nome_Projeto/blob/master/LICENSE) para melhores detalhes.
