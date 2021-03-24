@@ -13,9 +13,9 @@ Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqu
 
 A ideia é:
 
-_"Criar uma aplicação... onde a mesma tenha um design..., com intuito de..."_
+_"Criar uma aplicação de Controle de Gastos onde a mesma tenha um design simples e belo, com intuito de promover o aprendizado utilizando o framework Django"_
 
-Este repositório tem foco, na criação de uma aplicação..., interligado a um banco de dados...
+Este repositório tem foco, na criação de uma aplicação de Controle de Gastos, interligado a um banco de dados provido pelo próprio Django Framework facilitando dessa forma a manipulação de dados.
 
 --------------------------------------------------------------------------------------
 
@@ -39,8 +39,7 @@ Este é um projeto totalmente grátis!
 		- Funcionalidade da funcionalidade dessa funcionalidade....
 			- blablabla
 			- blablabla	
-		
-	
+
 --------------------------------------------------------------------------------------
 
 ### Algumas Observações Sobre o Projeto
@@ -50,29 +49,6 @@ Este é um projeto totalmente grátis!
 2 - Observações sobre o projeto.
 
 3 - Observações sobre o projeto.
-
---------------------------------------------------------------------------------------
-
-### Requisitos
-
-Para que o projeto funcione sem problemas, é necessário ter as ferramentas abaixo instaladas.
- 
-- * Nome_Tecnologia version 1.2
-
-- * Nome_Tecnologia version 1.3.0
-
-- * Java version 1.8.0
-
---------------------------------------------------------------------------------------
-
-### Dependências Necessárias
-
-- Connector mysql:
-	- mysql-connector-java
-	
-- Hibernate/lib/required:
-	- FastInfoset-1.2.15.jar
-	- antlr-2.7.7.jar
 
 --------------------------------------------------------------------------------------
 	
@@ -95,9 +71,9 @@ $ cd controle-gastos
 Com o terminal aberto, digite:
 
 ```
-$ python3 -m venv myvenv
+$ python3 -m venv env
 
-$ source myvenv/bin/activate
+$ source env/bin/activate
 
 $ python -m pip install --upgrade pip
 
