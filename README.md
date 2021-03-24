@@ -1,8 +1,8 @@
 ## Nome do Projeto 
 
-![License](https://img.shields.io/github/license/LucasSantus/Nome_do_Projeto)
-![Languages](https://img.shields.io/github/languages/count/LucasSantus/Nome_do_Projeto)
-![GitHub repo size](https://img.shields.io/github/repo-size/LucasSantus/Nome_do_Projeto)
+![License](https://img.shields.io/github/license/LucasSantus/controle-gastos)
+![Languages](https://img.shields.io/github/languages/count/LucasSantus/controle-gastos)
+![GitHub repo size](https://img.shields.io/github/repo-size/LucasSantus/controle-gastos)
 
 (Se Possivel, imagem do projeto).
 Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqui] (link).
