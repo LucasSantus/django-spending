@@ -25,6 +25,12 @@ body{
     background-color: #557144;
 }
 
+.card-detalhe{
+    background-color: pink;
+    padding-top: 2%; 
+    padding-bottom: 4%;
+}
+
 .card-shaper-title{
     background-color: #557934;
     align-items: center;

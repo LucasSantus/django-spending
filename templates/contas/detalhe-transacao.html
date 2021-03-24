@@ -4,30 +4,13 @@
  
 {% block content %}
 
-<div class="container" style="padding-top: 2%;">
-    <div class="row">
-        <div class="card blue lighten-5" style="padding-top: 2%; padding-bottom: 4%;">
-            <div class="container">
-                <CENTER><h1>{{ transacao.nome }}</h1></CENTER>
-                
-                <ul class="collapsible">
-                    <li>
-                      
-                      <div class="collapsible-body"><span class="black-text">Codigo da Atividade na BNCC: {{ transacao.cod_bncc }} </span></div>
-                    </li>
-
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">sports_kabaddi</i>Como Brincar ?</div>
-                      <div class="collapsible-body"><span class="black-text">{{ transacao.como_brincar }}</span></div>
-                    </li>
-
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">star</i>Curiosidades</div>
-                      <div class="collapsible-body"><span class="black-text">{{ transacao.curiosidades }}</span></div>
-                    </li> 
-
-                </ul>
-            </div>
+<div class="container">
+    <div class="card card-detalhe">
+        <div class="container">
+            {% for transacao in transacoes %}
+                {{ transacao.nome }}
+                {{ transacao.descricao }}
+            {% endfor %}
         </div>
     </div>
 </div>
