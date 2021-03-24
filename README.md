@@ -1,6 +1,6 @@
 ## Controle de Gastos
 
-![License](https://img.shields.io/github/license/LucasSantus/controle-gastos)
+![License](https://img.shields.io/github/license/LucasSantus/controle-gastos?style=social)
 ![Languages](https://img.shields.io/github/languages/count/LucasSantus/controle-gastos)
 ![GitHub repo size](https://img.shields.io/github/repo-size/LucasSantus/controle-gastos)
 
