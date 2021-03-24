@@ -2,26 +2,26 @@
 
 {% block content %}
     <div class="container">
-        
-            <div class="s12 m10 l3">
-                {% for categoria in categorias %}
-                    <div class="card-panel card-shaper-title center"> 
-                        <span class="white-text">{{ categoria.nome }}</span>
-                    </div>
-                {% endfor %}
-            </div>
-        
+        <div class="s12 m10 l3">
+            {% for categoria in categorias %}
+                <div class="card-panel card-shaper-title center"> 
+                    <span class="white-text">{{ categoria.nome }}</span>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     <div class="row center">
         <div class="container">
             {% for transacao in transacoes %}
-                <div class="col s12 m6">
-                    <div class="card-panel card-shaper center">
-                        <span class="white-text">
-                            </br>{{ transacao.descricao }}
-                        </span>
+                <a href="{% url 'detalhe-transacao' pk=transacao.id %}">
+                    <div class="col s12 m6">
+                        <div class="card-panel card-shaper center">
+                            <span class="white-text">
+                                </br>{{ transacao.descricao }}
+                            </span>
+                        </div>
                     </div>
-                </div>
+                </a>
             {% endfor %}
         </div>
     </div>

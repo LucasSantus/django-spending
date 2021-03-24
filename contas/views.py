@@ -24,15 +24,12 @@ def transacao(request, pk):
     return render(request, 'contas/transacao.html', context)
 
 def detalhe_transacao(request, pk):
-    categorias = Categoria.objects.filter(pk=pk)
-    transacoes = Transacao.objects.filter(categoria = pk)
+    transacoes = Transacao.objects.filter(pk=pk)
     
     context = {
-        'categorias': categorias,
         'transacoes': transacoes,
     }
-    return render(request, 'contas/transacao.html', context)
-
+    return render(request, 'contas/detalhe-transacao.html', context)
 
 def new(request):
     form = TransacaoForm(request.POST or None)
