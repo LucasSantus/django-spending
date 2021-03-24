@@ -4,14 +4,30 @@
  
 {% block content %}
 
+<nav>
+    {% for categoria in categorias %}
+        {% for transacao in transacoes %}
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="{% url 'index' %}" class="breadcrumb">{{categoria.nome}}</a>
+                    <a href="{% url 'transacao' pk=categoria.id %}" class="breadcrumb">{{transacao.nome}}</a>
+                    
+                </div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+  </nav>
+
 <div class="container">
+    <div class="container">
     <div class="card card-detalhe">
         <div class="container">
             {% for transacao in transacoes %}
-                {{ transacao.nome }}
-                {{ transacao.descricao }}
+                Nome: {{ transacao.nome }}<br>
+                Descrição: {{ transacao.descricao }}
             {% endfor %}
         </div>
+    </div>
     </div>
 </div>
 

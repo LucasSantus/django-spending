@@ -24,9 +24,11 @@ def transacao(request, pk):
     return render(request, 'contas/transacao.html', context)
 
 def detalhe_transacao(request, pk):
-    transacoes = Transacao.objects.filter(pk=pk)
+    categorias = Categoria.objects.filter(pk=pk)
+    transacoes = Transacao.objects.filter(pk=pk, categoria = pk)
     
     context = {
+        'categorias': categorias,
         'transacoes': transacoes,
     }
     return render(request, 'contas/detalhe-transacao.html', context)

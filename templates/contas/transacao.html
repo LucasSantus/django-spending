@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+    <nav>
+    {% for categoria in categorias %}
+    
+        <div class="nav-wrapper">
+            <div class="col s12">
+                <a href="{% url 'index' %}" class="breadcrumb">{{categoria.nome}}</a>
+                <a href="#" class="breadcrumb">Transações</a>
+        
+            </div>
+        </div>
+    
+    {% endfor %}
+    </nav>
+
     <div class="container">
         <div class="s12 m10 l3">
             {% for categoria in categorias %}
