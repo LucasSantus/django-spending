@@ -23,7 +23,6 @@ body{
 
 .btn-floating:hover{
     background-color: #557144;
-    color: black;
 }
 
 .card-shaper-title{
@@ -48,5 +47,5 @@ body{
 }
 
 .card-shaper:hover{
-    background-color: black;
+    background-color: #557934;
 }

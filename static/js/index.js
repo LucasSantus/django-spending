@@ -1,11 +1,12 @@
-
-//Floating Action Bottom
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.fixed-action-btn');
-  var instances = M.FloatingActionButton.init(elems, options);
+// Navbar
+const elemsDropdown = document.querySelectorAll(".dropdown-trigger");
+const instancesDropdown = M.Dropdown.init(elemsDropdown, {
+    coverTrigger: false
 });
-
-  // Or with jQuery
+const elemsSidenav = document.querySelectorAll(".sidenav");
+const instancesSidenav = M.Sidenav.init(elemsSidenav, {
+    edge: "left"
+});
 
 $(document).ready(function(){
   $('.fixed-action-btn').floatingActionButton();
