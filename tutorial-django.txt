@@ -18,5 +18,7 @@ python manage.py createsuperuser -> para criar um super usuário novo
 
 python manage.py runserver -> para rodar o projeto
 
+pip freeze > requirements.txt
+
 
 

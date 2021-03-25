@@ -20,14 +20,14 @@
 
 <div class="container">
     <div class="container">
-    <div class="card card-detalhe">
-        <div class="container">
-            {% for transacao in transacoes %}
-                Nome: {{ transacao.nome }}<br>
-                Descrição: {{ transacao.descricao }}
-            {% endfor %}
+        <div class="card card-detalhe">
+            <div class="container">
+                {% for transacao in transacoes %}
+                    Nome: {{ transacao.nome }}<br>
+                    Descrição: {{ transacao.descricao }}
+                {% endfor %}
+            </div>
         </div>
-    </div>
     </div>
 </div>
 
