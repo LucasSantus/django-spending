@@ -1,14 +1,10 @@
 ## Controle de Gastos
 
-
-
 ![License](https://img.shields.io/github/license/LucasSantus/controle-gastos)
 ![Languages](https://img.shields.io/github/languages/count/LucasSantus/controle-gastos)
 ![GitHub repo size](https://img.shields.io/github/repo-size/LucasSantus/controle-gastos)
 
-(Se Possivel, imagem do projeto).
 Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqui] (link).
-
 
 --------------------------------------------------------------------------------------
 
@@ -20,7 +16,6 @@ _"Criar uma aplicação de Controle de Gastos onde a mesma tenha um design simpl
 
 Este repositório tem foco, na criação de uma aplicação de Controle de Gastos, interligado a um banco de dados provido pelo próprio Django Framework facilitando dessa forma a manipulação de dados.
 
-
 --------------------------------------------------------------------------------------
 
 ### Por Que?
@@ -30,7 +25,6 @@ Este projeto faz parte do meu portfólio pessoal, então, ficarei feliz caso voc
 Você pode usar este projeto como quiser, seja para estudar, fazer melhorias, você que manda!
 
 Este é um projeto totalmente grátis!
-
 
 --------------------------------------------------------------------------------------
 
