@@ -1,8 +1,14 @@
-body{
+body {
     background-color: #e8eae6;
-    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
+main {
+    flex: 1 0 auto;
+}
+    
 .nav-wrapper{
     background-color: #557144;
 }
