@@ -2,13 +2,12 @@
 
 {% block content %}
 
-    <nav>
-        {% for categoria in categorias %}
-            <div class="nav-wrapper">
+    <nav class="teal lighten-1 z-depth-3">
+        {% for category in categorys %}
+            <div class="nav-wrapper" style="margin-left: 20px">
                 <div class="col s12">
-                    <a href="{% url 'index' %}" class="breadcrumb">{{categoria.nome}}</a>
-                    <a href="#" class="breadcrumb">Transações</a>
-            
+                    <a href="/" class="breadcrumb"><span>Home</span></a>
+                    <a class="breadcrumb"><span>{{category.name}}</span></a>
                 </div>
             </div>
         {% endfor %}

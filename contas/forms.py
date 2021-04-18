@@ -4,11 +4,14 @@ from .models import Category, Transaction
 class CategoryForm(ModelForm):
     class Meta:
         model = Category
-        fields = ['name']
+        fields = ['name', 'description']
         
         error_messages = {
             "name":{
                 "required": "Insira o Nome da Categoria!",
+            },
+            "description":{
+                "required": "Insira a Descrição da Categoria!",
             },
         }
 

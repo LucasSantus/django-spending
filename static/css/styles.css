@@ -9,6 +9,19 @@ main {
     flex: 1 0 auto;
 }
 
+.nav-wrapper .breadcrumb{
+    color: black;
+}
+
+.nav-wrapper .breadcrumb::before{
+    color: black;
+}
+
+.nav-wrapper .breadcrumb:hover{
+    color: white;
+}
+
+
 .btn-floating{
     background-color: #26a69a;
 }

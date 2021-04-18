@@ -6,6 +6,11 @@ class Category(models.Model):
         max_length=155,
     )
     
+    description = models.TextField(
+        verbose_name = "Descrição da Categoria: ",
+        max_length=300,
+    )
+    
     date_generated = models.DateTimeField(
         verbose_name = "Data da Criação: ", 
         auto_now_add=True,
@@ -27,6 +32,7 @@ class Transaction(models.Model):
     
     description = models.TextField(
         verbose_name = "Descrição da Transação: ",
+        max_length=300,
     )
     
     date = models.DateTimeField(
