@@ -4,18 +4,18 @@ from .form import *
 import datetime
 
 def index(request):
-    categorias = Categoria.objects.all()
+    category = Category.objects.all()
 
     context = {
-        'categorias': categorias,
-        'data': datetime.datetime.now()
+        'categorys': category,
+        'date': datetime.datetime.now()
     }
 
     return render(request, 'contas/index.html', context)
 
 def register_category(request):
 
-    form = TransacaoForm(request.POST)
+    form = CategoryForm(request.POST)
     if form.is_valid():
         form.save()
         return redirect('index')
@@ -26,37 +26,39 @@ def register_category(request):
 
     return render(request, 'contas/register-category.html', context)
 
-def transacao(request, pk):
-    categorias = Categoria.objects.filter(pk=pk)
-    transacoes = Transacao.objects.filter(categoria = pk)
-    
-    context = {
-        'categorias': categorias,
-        'transacoes': transacoes,
-    }
-    return render(request, 'contas/transacao.html', context)
-
-def detalhe_transacao(request, pk):
-    categorias = Categoria.objects.filter(pk=pk)
-    transacoes = Transacao.objects.filter(pk=pk, categoria = pk)
-    
-    context = {
-        'categorias': categorias,
-        'transacoes': transacoes,
-    }
-    return render(request, 'contas/detalhe-transacao.html', context)
-
-def new(request):
-    form = TransacaoForm(request.POST or None)
+def register_transaction(request):
+    form = TransactionForm(request.POST)
     if form.is_valid():
         form.save()
-        return redirect('categoria')
+        return redirect('index')
 
     context = {
         'form': form,
     }
 
-    return render(request, 'contas/form.html', context)
+    return render(request, 'contas/register-transaction.html', context)
+
+def list_transaction(request, id_category):
+    categorys = Category.objects.filter(pk=id_category)
+    transactions = Transaction.objects.filter(category=id_category)
+    
+    context = {
+        'categorys': categorys,
+        'transactions': transactions,
+    }
+    
+    return render(request, 'contas/list-transactions.html', context)
+
+def detail_transaction(request, pk):
+    
+    categorys = Category.objects.filter(pk=id_category)
+    transactions = Transaction.objects.filter(pk=pk, category = pk)
+    
+    context = {
+        'categorys': categorys,
+        'transactions': transactions,
+    }
+    return render(request, 'contas/detail-transaction.html', context)
 
 def update(request, pk):
     transacao = Transacao.objects.get(pk=pk)
