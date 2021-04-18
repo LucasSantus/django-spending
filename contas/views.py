@@ -60,22 +60,28 @@ def detail_transaction(request, pk):
     }
     return render(request, 'contas/detail-transaction.html', context)
 
-def update(request, pk):
-    transacao = Transacao.objects.get(pk=pk)
-    form = TransacaoForm(request.POST or None, instance=transacao)
+def update_transaction(request, id_transaction):
+    transaction = Transaction.objects.get(pk=id_transaction)
+    form = TransactionForm(request.POST or None, instance=transaction)
     if form.is_valid():
         form.save()
-        return redirect('transacao')
+        return redirect('index')
 
     context = {
         'form': form,
-        'transacao': transacao
+        'transaction': transaction,
     }
 
     return render(request, 'contas/form.html', context)
 
-def delete(request, pk):
-    transacao = Transacao.objects.get(pk=pk)
-    transacao.delete()
+def delete_category(request, id_category):
+    category = Category.objects.get(pk=id_category)
+    category.delete()
 
-    return redirect('transacao')
+    return redirect('index')
+
+def delete_transaction(request, id_transaction):
+    transaction = Transaction.objects.get(pk=id_transaction)
+    transaction.delete()
+
+    return redirect('index')
