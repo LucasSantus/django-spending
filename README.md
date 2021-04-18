@@ -1,9 +1,5 @@
 ## Controle de Gastos
 
-![License](https://img.shields.io/github/license/LucasSantus/controle-gastos)
-![Languages](https://img.shields.io/github/languages/count/LucasSantus/controle-gastos)
-![GitHub repo size](https://img.shields.io/github/repo-size/LucasSantus/controle-gastos)
-
 Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqui] (link).
 
 --------------------------------------------------------------------------------------
@@ -25,19 +21,6 @@ Este projeto faz parte do meu portfólio pessoal, então, ficarei feliz caso voc
 Você pode usar este projeto como quiser, seja para estudar, fazer melhorias, você que manda!
 
 Este é um projeto totalmente grátis!
-
---------------------------------------------------------------------------------------
-
-### Funcionalidades do Projeto
-
-- Funcionalidade....
-
-- Funcionalidade....
-	- Funcionalidade dessa funcionalidade....
-	- Funcionalidade dessa funcionalidade....
-		- Funcionalidade da funcionalidade dessa funcionalidade....
-			- blablabla
-			- blablabla	
 
 --------------------------------------------------------------------------------------
 
@@ -97,10 +80,6 @@ http://127.0.0.1:8000/admin/
  
 - **Lucas Santos:** [GitHub](https://github.com/LucasSantus)
 
-Caso tenha alguma dúvida ou deseja participar do projeto, entre em contato!
-
-E-mail: leos9877@gmail.com
- 
 Siga-me no github!
 
 Obrigado por me visitar e boa codificação!
