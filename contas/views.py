@@ -13,6 +13,19 @@ def index(request):
 
     return render(request, 'contas/index.html', context)
 
+def register_category(request):
+
+    form = TransacaoForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return redirect('index')
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'contas/register-category.html', context)
+
 def transacao(request, pk):
     categorias = Categoria.objects.filter(pk=pk)
     transacoes = Transacao.objects.filter(categoria = pk)

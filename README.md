@@ -55,6 +55,8 @@ $ pip install -r requirements.txt
 **Preparando o Projeto**
 
 ```
+$ python manage.py makemigrations contas
+
 $ python manage.py migrate
 
 $ python manage.py createsuperuser

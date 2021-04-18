@@ -2,29 +2,37 @@
 
 {% load static %}
 
-{% block content %}
+{% block title %}
+    Home | Categorias
+{% endblock %}
 
-    <section>
-        <div class="row center">
-            <div class="container">
-                <h1>Seja bem-vindo</h1>
-                <ul>
-                    {% for categoria in categorias %}
-                        <a href="{% url 'transacao' pk=categoria.id %}">
-                            <div class="container">
-                                <div class="col s12 m6">
-                                    <div class="card-panel card-shaper center">
-                                        <span class="white-text">
-                                            </br>{{ categoria.nome }}
-                                        </span>
-                                    </div>
+{% block content %}
+    <div class="fixed-action-btn">
+        <a href="{% url 'register-category' %}" class="btn-floating btn-large pulse">
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
+
+    <div class="row center">
+        <div class="container">
+            <h1>Seja bem-vindo</h1>
+            <ul>
+                {% for categoria in categorias %}
+                    <a href="{% url 'transacao' pk=categoria.id %}">
+                        <div class="container">
+                            <div class="col s12 m6">
+                                <div class="card-panel card-shaper center">
+                                    <span class="white-text">
+                                        </br>{{ categoria.nome }}
+                                    </span>
                                 </div>
                             </div>
-                        </a>
-                    {% endfor %}
-                </ul>
-            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </ul>
         </div>
-    </section>
+    </div>
+
 
 {% endblock %}
