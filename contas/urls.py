@@ -7,16 +7,18 @@ urlpatterns = [
     path('', index, name='index'),
     
     #CADASTRAR
-    path('new/', new, name='new'),
-    path('register-category', register_category, name="register_category"),
+    path('register-category/', register_category, name="register_category"),
+    path('register-transaction/', register_transaction, name='register_transaction'),
     
     #VISUALIZAR
-    path('detalhe-transacao/<int:pk>', detalhe_transacao, name='detalhe-transacao'),
-    path('transacao/<int:pk>', transacao, name='transacao'),
+    path('list-transaction/<int:id_category>', list_transaction, name='list_transaction'),
+    path('detail-transaction/<int:pk>', detail_transaction, name='detail_transaction'),
     
     #ATUALIZAR
-    path('update/<int:pk>', update, name='update'),
+    path('update-category/<int:id_category>', update_category, name='update_category'),
+    path('update-transaction/<int:id_transaction>', update_transaction, name='update_transaction'),
     
     #DELETAR
-    path('delete/<int:pk>', delete, name='delete')
+    path('delete-category/<int:id_category>', delete_category, name='delete_category'),
+    path('delete-transaction/<int:id_transaction>', delete_transaction, name='delete_transaction'),
 ]

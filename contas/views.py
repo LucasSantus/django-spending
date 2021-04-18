@@ -60,6 +60,20 @@ def detail_transaction(request, pk):
     }
     return render(request, 'contas/detail-transaction.html', context)
 
+def update_category(request, id_category):
+    category = Category.objects.get(pk=id_category)
+    form = CategoryForm(request.POST or None, instance=category)
+    if form.is_valid():
+        form.save()
+        return redirect('index')
+
+    context = {
+        'form': form,
+        'category': category,
+    }
+
+    return render(request, 'contas/register-category.html', context)
+
 def update_transaction(request, id_transaction):
     transaction = Transaction.objects.get(pk=id_transaction)
     form = TransactionForm(request.POST or None, instance=transaction)
@@ -72,7 +86,7 @@ def update_transaction(request, id_transaction):
         'transaction': transaction,
     }
 
-    return render(request, 'contas/form.html', context)
+    return render(request, 'contas/register-transaction.html', context)
 
 def delete_category(request, id_category):
     category = Category.objects.get(pk=id_category)
