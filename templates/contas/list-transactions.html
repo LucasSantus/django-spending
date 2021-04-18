@@ -3,18 +3,39 @@
 {% block content %}
 
     <nav>
-    {% for categoria in categorias %}
-    
-        <div class="nav-wrapper">
-            <div class="col s12">
-                <a href="{% url 'index' %}" class="breadcrumb">{{categoria.nome}}</a>
-                <a href="#" class="breadcrumb">Transações</a>
-        
+        {% for categoria in categorias %}
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="{% url 'index' %}" class="breadcrumb">{{categoria.nome}}</a>
+                    <a href="#" class="breadcrumb">Transações</a>
+            
+                </div>
             </div>
-        </div>
-    
-    {% endfor %}
+        {% endfor %}
     </nav>
+
+    <div class="fixed-action-btn horizontal">
+        <a class="btn-floating btn-large">
+            <i class="large material-icons">menu</i>
+        </a>
+        <ul class="black-text">
+            <li class="black-text">
+                <a href="{% url 'register_category' %}" class="btn-floating green btn tooltipped black-text" data-position="top" data-tooltip="Cadastrar">
+                    <i class="material-icons">add</i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn-floating yellow btn tooltipped" data-position="top" data-tooltip="Editar">
+                    <i class="material-icons">edit</i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn-floating red btn tooltipped" data-position="top" data-tooltip="Remover">
+                    <i class="material-icons">delete</i>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <div class="container">
         <div class="s12 m10 l3">

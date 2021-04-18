@@ -14,7 +14,7 @@
         </a>
         <ul class="black-text">
             <li class="black-text">
-                <a href="{% url 'register-category' %}" class="btn-floating green btn tooltipped black-text" data-position="top" data-tooltip="Cadastrar">
+                <a href="{% url 'register_category' %}" class="btn-floating green btn tooltipped black-text" data-position="top" data-tooltip="Cadastrar">
                     <i class="material-icons">add</i>
                 </a>
             </li>
@@ -34,13 +34,13 @@
     <div class="row center">
         <div class="container">
             <ul>
-                {% for categoria in categorias %}
-                    <a href="{% url 'transacao' pk=categoria.id %}">
+                {% for category in categorys %}
+                    <a href="{% url 'list_transaction' id_category=category.id %}">
                         <div class="container">
                             <div class="col s12 m6">
                                 <div class="card-panel card-shaper center">
                                     <span class="white-text">
-                                        </br>{{ categoria.nome }}
+                                        </br>{{ category.name }}
                                     </span>
                                 </div>
                             </div>
