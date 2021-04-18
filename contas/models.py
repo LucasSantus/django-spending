@@ -1,24 +1,53 @@
 from django.db import models
 
-# Create your models here.
+class Category(models.Model):
+    name = models.CharField(
+        verbose_name = "Nome da Categoria: ", 
+        max_length=155,
+    )
+    
+    date_generated = models.DateTimeField(
+        verbose_name = "Data da Criação: ", 
+        auto_now_add=True,
+    )
 
-class Categoria(models.Model):
-    nome = models.CharField(verbose_name = "Nome", max_length=100)
-    dt_criacao = models.DateTimeField(verbose_name = "Data Criação", auto_now_add=True)
+    class Meta:
+        verbose_name = "Categoria"
+        verbose_name_plural = "Categorias"
+        db_table = "category"
 
     def __str__(self):
         return self.nome
         
-class Transacao(models.Model):
-    nome = models.CharField(verbose_name = "Nome",max_length=194,)
-    descricao = models.TextField(verbose_name = "Descrição",)
-    data = models.DateTimeField(verbose_name = "Data",)
-    valor = models.DecimalField(verbose_name = "Valor", max_digits=7, decimal_places=2)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+class Transaction(models.Model):
+    name = models.CharField(
+        verbose_name = "Nome da Transação: ",
+        max_length=155,
+    )
+    
+    description = models.TextField(
+        verbose_name = "Descrição da Transação: ",
+    )
+    
+    date = models.DateTimeField(
+        verbose_name = "Data da Transação: ",
+    )
+    
+    value = models.DecimalField(
+        verbose_name = "Valor da Transação: ", 
+        max_digits=7, 
+        decimal_places=2,
+    )
+    
+    category = models.ForeignKey(
+        Category, 
+        on_delete=models.CASCADE,
+    )
 
     class Meta:
         verbose_name = "Transação"
         verbose_name_plural = "Transações"
-    
+        db_table = "transaction"
+
     def __str__(self):
-        return self.descricao
+        return self.nome

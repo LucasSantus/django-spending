@@ -1,37 +1,42 @@
 from django.forms import ModelForm
-from .models import Categoria, Transacao
+from .models import Category, Transaction
 
-class CategoriaForm(ModelForm):
+class CategoryForm(ModelForm):
     class Meta:
         model = Categoria
-        fields = ['nome']
+        fields = ['name']
         
         error_messages = {
-            "nome":{
-                "required": "É obrigatório o Nome Completo do individuo para a realização do registro",
+            "name":{
+                "required": "Insira o Nome da Categoria!",
             },
         }
 
-
-class TransacaoForm(ModelForm):
+class TransactionForm(ModelForm):
     class Meta:
-        model = Transacao
-        fields = ['nome','descricao','data','valor','categoria']
+        model = Transaction
+        fields = ['__all__']
         
         error_messages = {
-            "nome":{
-                "required": "É obrigatório o Nome Completo do individuo para a realização do registro",
+            "name":{
+                "required": "Insira o Nome da Transação!",
             },
 
-            "cpf":{
-                "required": "É obrigatório o CPF do individuo para a realização do registro",
+            "description":{
+                "required": "Insira a Descrição da Transação!",
                 "invalid": "Insira um CPF válido!",
             },
-            "data_nascimento":{
-                "required": "É obrigatório a Data de Nascimento do individuo para a realização do registro",
-                "invalid": "Insira uma Data de Nascimento válida!",
+            
+            "date":{
+                "required": "Insira a Data da Transação!",
+                "invalid": "Insira uma Data válida!",
             },
-            "password":{
-                "required": "É obrigatório a Senha do individuo para a realização do registro",
+            
+            "value":{
+                "required": "Insira o Valor da Transação!",
+            },
+            
+            "category":{
+                "required": "Insira uma Categoria para a Transação!",
             },
         }
