@@ -9,15 +9,26 @@
 {% block content %}
 
     <div class="fixed-action-btn horizontal">
-        <a class="btn-floating btn-large red">
-            <i class="large material-icons">mode_edit</i>
+        <a class="btn-floating btn-large">
+            <i class="large material-icons">menu</i>
         </a>
-        <ul>
-            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-            </ul>
+        <ul class="black-text">
+            <li class="black-text">
+                <a href="{% url 'register-category' %}" class="btn-floating green btn tooltipped black-text" data-position="top" data-tooltip="Cadastrar">
+                    <i class="material-icons">add</i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn-floating yellow btn tooltipped" data-position="top" data-tooltip="Editar">
+                    <i class="material-icons">edit</i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn-floating red btn tooltipped" data-position="top" data-tooltip="Remover">
+                    <i class="material-icons">delete</i>
+                </a>
+            </li>
+        </ul>
     </div>
         
     <div class="row center">
@@ -48,5 +59,11 @@
                 direction: 'top'
             });
         }); 
+        // tooltip  
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tooltipped');
+            var instances = M.Tooltip.init(elems);
+        });
+ 
     </script>
 {% endblock %}

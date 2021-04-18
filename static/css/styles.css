@@ -8,26 +8,13 @@ body {
 main {
     flex: 1 0 auto;
 }
-    
-.navbar-fixed nav .container .nav-wrapper{
-    background-color: #557144;
-}
-
-.brand-logo{
-    font-size: large;
-}
-
-.page-footer{
-   
-    background-color: #557144;
-}
 
 .btn-floating{
-    background-color: #9dad7f;
+    background-color: #26a69a;
 }
 
 .btn-floating:hover{
-    background-color: #557144;
+    background-color: teal;
 }
 
 .card-detalhe{
@@ -59,4 +46,8 @@ main {
 
 .card-shaper:hover{
     background-color: #557934;
+}
+
+.material-tooltip {
+    color: black;
 }
