@@ -22,7 +22,7 @@ class Category(models.Model):
         db_table = "category"
 
     def __str__(self):
-        return self.nome
+        return self.name
         
 class Transaction(models.Model):
     name = models.CharField(
@@ -56,4 +56,4 @@ class Transaction(models.Model):
         db_table = "transaction"
 
     def __str__(self):
-        return self.nome
+        return self.name
