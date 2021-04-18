@@ -8,14 +8,13 @@
 
 {% block content %}
     <div class="fixed-action-btn">
-        <a href="{% url 'register-category' %}" class="btn-floating btn-large pulse">
+        <a href="{% url 'register_category' %}" class="btn-floating btn-large">
             <i class="large material-icons">add</i>
         </a>
     </div>
 
     <div class="row center">
         <div class="container">
-            <h1>Seja bem-vindo</h1>
             <ul>
                 {% for categoria in categorias %}
                     <a href="{% url 'transacao' pk=categoria.id %}">

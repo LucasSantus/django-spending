@@ -9,17 +9,16 @@ main {
     flex: 1 0 auto;
 }
     
-.nav-wrapper{
+.navbar-fixed nav .container .nav-wrapper{
     background-color: #557144;
 }
 
 .brand-logo{
     font-size: large;
-    margin-left: 10px;
 }
 
 .page-footer{
-    padding-top: 60px;
+   
     background-color: #557144;
 }
 

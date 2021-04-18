@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
         <!-- Import Material Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -16,7 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
         <!-- Import JQuery -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" defer></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" defer></script>
 
         <!-- Import Java Script -->
         <script type="text/javascript" src="{% static 'js/materialize.min.js' %}" defer></script>
@@ -36,7 +39,7 @@
                 <nav>
                     <div class="container">
                         <div class="nav-wrapper">
-                            <a href="{% url 'index' %}" class="brand-logo">Spending Control</a>
+                            <a href="/" class="brand-logo"><span class='truncate'>CSpending</span></a>  
                             <ul class="right hide-on-med-and-down">
                                 <li><a href="#">Sass</a></li>
                                 <li><a href="#">Components</a></li>
@@ -52,12 +55,12 @@
             {% endblock %}
         </main>
 
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container">
-                    Copyright © 2021 Spending Control
-                    <a class="white-text text-lighten-3 right" href="#!">More Links</a>
+        <footer class="page-footer transparent">
+            <div class="row" style="width: 60%;">
+                <div class="center">
+                    <span class="black-text">&copy; Copyright CSpending, All rights reserved.</span>
                 </div>
+            </div>
         </footer>
     </body>
 </html>
