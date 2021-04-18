@@ -6,6 +6,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+        <!-- Import Java Script Personalizado -->
+        <script src="js/index.js" defer></script>
+
         <!-- Import Material Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -18,14 +21,16 @@
         <!-- Let browser know website is optimized for mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-        <!-- Import JQuery -->
+        <!-- Import JQuery 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" defer></script>
+        -->
+        <script type="text/javascript" src="{% static 'js/jquery-3.1.1.js' %}" defer></script>
 
         <!-- Import Java Script -->
-        <script type="text/javascript" src="{% static 'js/materialize.min.js' %}" defer></script>
+        <script type="text/javascript" src="{% static 'js/materialize.js' %}" defer></script>
 
-        <!-- Import Java Script Personalizado -->
-        <script src="js/index.js" defer></script>
+        <!-- Import JQuery Mask -->
+        <script type="text/javascript" src="{% static 'js/jquery.mask.min.js' %}" defer></script>
 
         <title>
             {% block title %}

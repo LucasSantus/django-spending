@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib import admin
-from .views import index, transacao, detalhe_transacao, delete, update, new, register_category
+from .views import index, register_category, register_transaction, list_transaction, detail_transaction, update_category, update_transaction, delete_category, delete_transaction
 
 urlpatterns = [
     #HOME

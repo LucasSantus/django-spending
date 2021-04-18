@@ -3,7 +3,7 @@ from .models import Category, Transaction
 
 class CategoryForm(ModelForm):
     class Meta:
-        model = Categoria
+        model = Category
         fields = ['name']
         
         error_messages = {
@@ -15,7 +15,7 @@ class CategoryForm(ModelForm):
 class TransactionForm(ModelForm):
     class Meta:
         model = Transaction
-        fields = ['__all__']
+        fields = ('__all__')
         
         error_messages = {
             "name":{

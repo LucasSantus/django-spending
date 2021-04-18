@@ -1,13 +1,13 @@
-// Navbar
-const elemsDropdown = document.querySelectorAll(".dropdown-trigger");
-const instancesDropdown = M.Dropdown.init(elemsDropdown, {
-    coverTrigger: false
-});
-const elemsSidenav = document.querySelectorAll(".sidenav");
-const instancesSidenav = M.Sidenav.init(elemsSidenav, {
-    edge: "left"
+// Menu flutuante 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.fixed-action-btn');
+  var instances = M.FloatingActionButton.init(elems, {
+    direction: 'top'
+  });
 });
 
-$(document).ready(function(){
-  $('.fixed-action-btn').floatingActionButton();
+// tooltip  
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.tooltipped');
+  var instances = M.Tooltip.init(elems);
 });

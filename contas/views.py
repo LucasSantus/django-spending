@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import *
-from .form import *
+from .models import Category, Transaction
+from .forms import CategoryForm, TransactionForm
 import datetime
 
 def index(request):
