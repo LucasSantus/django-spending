@@ -18,48 +18,27 @@
                     <i class="material-icons">add</i>
                 </a>
             </li>
-            <li>
-                <a href="#" class="btn-floating yellow btn tooltipped" data-position="top" data-tooltip="Editar">
-                    <i class="material-icons">edit</i>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="btn-floating red btn tooltipped" data-position="top" data-tooltip="Remover">
-                    <i class="material-icons">delete</i>
-                </a>
-            </li>
         </ul>
     </div>
-
     <div class="container">
         <div class="row">
             {% for category in categorys %}
                 <div class="col s12 m6 l4">
                     <div class="card hoverable small">
                         <div class="card-content">
-                            <span class="card-title grey-text text-darken-4">{{category.name}}</span>
-                            <p><span class="card-content grey-text text-darken-4 ">{{category.description|truncatechars:220}}</span></p>
+                            <div class="col s12">
+                                <div class="col s12"><span class="card-title left grey-text text-darken-4">{{category.name}}</span></div>
+                            </div>
+                            <span class="card-content grey-text text-darken-4 ">{{category.description|truncatechars:220}}</span>
                         </div>
-                        <div class="card-action"><a href="{% url 'list_transaction' id_category=category.id %}" class="right">VISUALIZAR</a></div>
+                        <div class="card-action">
+                            <a href="{% url 'list_transaction' id_category=category.id %}" class="left">VISUALIZAR</a>
+                            <a class="dropdown-trigger right" href="#" data-target='dropdown1'><i id="icon-delete" class="material-icons">delete</i></a>               
+                            <a class="dropdown-trigger right" href="#" data-target='dropdown1'><i id="icon-edit" class="material-icons">edit</i></a>              
+                        </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
     </div>
-
-    <script>
-        // Menu flutuante 
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.fixed-action-btn');
-            var instances = M.FloatingActionButton.init(elems, {
-                direction: 'top'
-            });
-        }); 
-        // tooltip  
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.tooltipped');
-            var instances = M.Tooltip.init(elems);
-        });
- 
-    </script>
 {% endblock %}

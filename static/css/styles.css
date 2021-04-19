@@ -10,17 +10,16 @@ main {
 }
 
 .nav-wrapper .breadcrumb{
-    color: black;
+    color: #4db6ac;
 }
 
 .nav-wrapper .breadcrumb::before{
-    color: black;
+    color: #4db6ac;
 }
 
 .nav-wrapper .breadcrumb:hover{
-    color: white;
+    color: teal;
 }
-
 
 .btn-floating{
     background-color: #26a69a;
@@ -30,18 +29,16 @@ main {
     background-color: teal;
 }
 
-.card-detalhe{
-    background-color: gray;
-    padding-top: 2%; 
-    padding-bottom: 4%;
+.card .card-content{
+    padding: 18px;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
-    color: #26a69a;
+#icon-edit{
+    color: #42a5f5;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover{
-    color: #00695c;
+#icon-delete{
+    color: #ef5350;
 }
 
 .material-tooltip {
