@@ -1,28 +1,51 @@
+{% extends 'base.html' %}
+
 {% load static %}
  
+{% load materializecss %}
+
+{% block title %}
+    Registrar | Categoria
+{% endblock %}
+
 {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% if form.errors %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
 
+<div class="container">
     <form method="POST">
         {% csrf_token %}
+        <div class="container">
+            <div class="card z-depth-5">
+                <div class='container center'>
+                    <h4>
+                        {{nome_pagina}}
+                    </h4>
+                </div>
 
-        {{ form.as_p }}
+                <div class="container style-form">                       
+                    {{ form|materializecss }} 
+                </div>
 
-        <button type="submit">Salvar</button>
-        {% if transacao %}
-            <a href="{% url 'delete' transacao.id %}">Remover</a>
-        {% endif %}
+                <div class="center text-right">
+                    <a href="/" class="btn btn-secondary text-white" type="button">
+                        <span class="text">Cancelar</span>
+                    </a>
+                    <button class="btn btn-primary" type="submit">
+                        <span class="text">Cadastrar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </form>
+</div>
 
-</body>
-</html>
+
+
 {% endblock %}
