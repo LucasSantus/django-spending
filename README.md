@@ -1,6 +1,6 @@
 ## Controle de Gastos
 
-Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqui] (link).
+Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqui] (link). Imagens Indisponiveis!
 
 --------------------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ Este repositório tem foco, na criação de uma aplicação de Controle de Gasto
 
 ### Por Que?
 
-Este projeto faz parte do meu portfólio pessoal, então, ficarei feliz caso você fornecer algum feedback sobre o mesmo, código, estrutura, funcionalidade ou qualquer coisa que você possa relatar para melhora-lo.
+Este projeto faz parte do meu portfólio pessoal, então, ficarei feliz caso você fornecer algum feedback, código, estrutura, funcionalidade ou qualquer coisa que você possa relatar para melhora-lo.
 
 Você pode usar este projeto como quiser, seja para estudar, fazer melhorias, você que manda!
 
@@ -33,7 +33,7 @@ Dentro da pasta onde o projeto irá ficar armazenado, abra o terminal PowerShell
 ```
 $ git init
 
-$ git clone https://github.com/LucasSantus/controle-gastos.git
+$ git clone git@github.com:LucasSantus/controle-gastos.git
 
 $ cd controle-gastos
 ```
@@ -68,13 +68,17 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
 
-para visualizar o projeto: http://127.0.0.1:8000/
+**Visualizando o Projeto**
+```
+http://127.0.0.1:8000/
+```
 
 **Acessando o Admin**
 
 Com o projeto rodando, adicione o 'admin/' dps da URL:
-
+```
 http://127.0.0.1:8000/admin/
+```
 
 --------------------------------------------------------------------------------------
 
