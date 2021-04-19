@@ -37,10 +37,25 @@ main {
     color: #42a5f5;
 }
 
+#icon-edit:hover{
+    color: #90caf9;
+}
+
 #icon-delete{
     color: #ef5350;
 }
 
+#icon-delete:hover{
+    color: #ef9a9a;
+}
+
 .material-tooltip {
     color: black;
+}
+
+.container .container .card{
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
 }

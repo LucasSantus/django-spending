@@ -26,12 +26,25 @@
                         </div>
                         <div class="card-action">
                             <a href="{% url 'list_transaction' id_category=category.id %}" class="left">VISUALIZAR</a>
-                            <a class="dropdown-trigger right" href="#" data-target='dropdown1'><i id="icon-delete" class="material-icons">delete</i></a>               
-                            <a class="dropdown-trigger right" href="#" data-target='dropdown1'><i id="icon-edit" class="material-icons">edit</i></a>              
+                            <a class="modal-trigger right" href="#" data-target='modal1'><i id="icon-delete" class="material-icons">delete</i></a>               
+                            <a class="right" href="{% url 'update_category' id_category=category.id %}" data-target='dropdown1'><i id="icon-edit" class="material-icons">edit</i></a>              
                         </div>
                     </div>
                 </div>
             {% endfor %}
+        </div>
+    </div>
+
+    <!-- Modal - SAIR -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h5 class="modal-title" id="ModalLabel">Você realmente deseja deletar essa categoria?</h5>
+            <p>Para confirmar essa ação selecione "CONFIRMAR".</p>
+        </div>
+
+        <div class="modal-footer">
+            <a class="modal-close waves-effect waves-green btn-flat" style="color:#32BF84">CANCELAR</a>
+            <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">CONFIRMAR</a>
         </div>
     </div>
 {% endblock %}

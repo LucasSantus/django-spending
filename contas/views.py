@@ -21,6 +21,8 @@ def register_category(request):
         return redirect('index')
 
     context = {
+        'name_page': "Registrar Categoria",
+        'name_button': "REGISTRAR",
         'form': form,
     }
 
@@ -68,6 +70,8 @@ def update_category(request, id_category):
         return redirect('index')
 
     context = {
+        'name_page': "Editar Categoria",
+        'name_button': "EDITAR",
         'form': form,
         'category': category,
     }

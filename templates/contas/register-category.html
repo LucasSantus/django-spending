@@ -22,10 +22,10 @@
     <form method="POST">
         {% csrf_token %}
         <div class="container">
-            <div class="card z-depth-5">
+            <div class="card z-depth-4">
                 <div class='container center'>
                     <h4>
-                        {{nome_pagina}}
+                        {{name_page}}
                     </h4>
                 </div>
 
@@ -34,18 +34,16 @@
                 </div>
 
                 <div class="center text-right">
-                    <a href="/" class="btn btn-secondary text-white" type="button">
+                    <a href="/" class="btn-flat btn-secondary text-white" style="color: teal" type="button">
                         <span class="text">Cancelar</span>
                     </a>
-                    <button class="btn btn-primary" type="submit">
-                        <span class="text">Cadastrar</span>
+                    <button class="btn btn-primary teal" type="submit">
+                        <span class="text">{{name_button}}</span>
                     </button>
                 </div>
             </div>
         </div>
     </form>
 </div>
-
-
 
 {% endblock %}
