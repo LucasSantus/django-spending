@@ -14,11 +14,13 @@ def index(request):
     return render(request, 'contas/index.html', context)
 
 def register_category(request):
-
-    form = CategoryForm(request.POST)
-    if form.is_valid():
-        form.save()
-        return redirect('index')
+    
+    form = CategoryForm()
+    if request.method == "POST":
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
 
     context = {
         'name_page': "Registrar Categoria",
@@ -30,9 +32,11 @@ def register_category(request):
 
 def register_transaction(request):
     form = TransactionForm(request.POST)
-    if form.is_valid():
-        form.save()
-        return redirect('index')
+    if request.method == "POST":
+        form = TransactionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
 
     context = {
         'form': form,

@@ -23,7 +23,9 @@
 
         <!-- Import JQuery -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
-    
+
+        <!-- Import Java Script Personalizado -->
+        <script type="text/javascript" src="{% static 'js/index.js' %}" defer></script>
     
         <!-- Import Java Script -->
         <script type="text/javascript" src="{% static 'js/materialize.min.js' %}" defer></script>
@@ -44,10 +46,6 @@
                     <div class="container">
                         <div class="nav-wrapper">
                             <a href="/" class="brand-logo"><span class='truncate'>CSpending</span></a>  
-                            <ul class="right hide-on-med-and-down">
-                                <li><a href="#">Sass</a></li>
-                                <li><a href="#">Components</a></li>
-                            </ul>
                         </div>
                     </div>
                 </nav>
@@ -60,30 +58,9 @@
         </main>
 
         <footer class="page-footer transparent">
-            <div class="row" style="width: 60%;">
-                <div class="center">
-                    <span class="teal-text">&copy; Copyright CSpending, All rights reserved.</span>
-                </div>
+            <div class="row">
+                <span class="teal-text">&copy; Copyright CSpending, All rights reserved.</span>
             </div>
         </footer>
-
-        <script>
-            // Menu flutuante 
-            document.addEventListener('DOMContentLoaded', function() {
-                var elems = document.querySelectorAll('.fixed-action-btn');
-                var instances = M.FloatingActionButton.init(elems, {
-                    direction: 'top'
-                });
-            }); 
-            // tooltip  
-            document.addEventListener('DOMContentLoaded', function() {
-                var elems = document.querySelectorAll('.tooltipped');
-                var instances = M.Tooltip.init(elems);
-            });
-
-            $(document).ready(function(){
-                $('.modal').modal();
-            });
-        </script>
     </body>
 </html>

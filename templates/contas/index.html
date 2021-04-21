@@ -25,26 +25,29 @@
                             <span class="card-content grey-text text-darken-4 ">{{category.description|truncatechars:220}}</span>
                         </div>
                         <div class="card-action">
-                            <a href="{% url 'list_transaction' id_category=category.id %}" class="left">VISUALIZAR</a>
+                            <a href="{% url 'list_transaction' id_category=category.id %}" class="left btn-flat">VISUALIZAR</a>
                             <a class="modal-trigger right" href="#" data-target='modal1'><i id="icon-delete" class="material-icons">delete</i></a>               
                             <a class="right" href="{% url 'update_category' id_category=category.id %}" data-target='dropdown1'><i id="icon-edit" class="material-icons">edit</i></a>              
                         </div>
                     </div>
                 </div>
+
+                <!-- Confirm detele Modal-->
+                <div class="modal fade" id="modal1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Atenção!!</h5>
+                        </div>
+                        <div class="modal-body">Esta é uma ação irreversivel!! tem mesmo a certeza que pretende eliminar esta categoria?</div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary modal-close" type="button" data-dismiss="modal">CANCELAR</button>
+                                <a class="btn btn-danger modal-close" href="{% url 'delete_category' id_category=category.id %}">CONFIRMAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
-        </div>
-    </div>
-
-    <!-- Modal - SAIR -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <h5 class="modal-title" id="ModalLabel">Você realmente deseja deletar essa categoria?</h5>
-            <p>Para confirmar essa ação selecione "CONFIRMAR".</p>
-        </div>
-
-        <div class="modal-footer">
-            <a class="modal-close waves-effect waves-green btn-flat" style="color:#32BF84">CANCELAR</a>
-            <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">CONFIRMAR</a>
         </div>
     </div>
 {% endblock %}
