@@ -49,13 +49,6 @@ main {
     color: #ef9a9a;
 }
 
-.container .container .card{
-    padding-top: 2%;
-    padding-bottom: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-}
-
 .card .card-action {
     border-top: 1px solid #bdbdbd;
 }
@@ -70,4 +63,26 @@ main {
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
     color: #80cbc4;
+}
+
+.container .container .card .btn-primary{
+    background-color: #26a69a;
+    margin-bottom: 4px;
+}
+
+.container .container .card .btn-primary:hover{
+    background-color: #4db6ac;
+}
+
+.container .container .card .btn-secondary{
+    background-color: #26a69a;
+    margin-bottom: 4px;
+}
+
+.container .container .card .btn-secondary:hover{
+    background-color: #4db6ac;
+}
+
+.style-form{
+    padding: 3%;
 }

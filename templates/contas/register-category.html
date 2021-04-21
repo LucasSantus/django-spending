@@ -10,40 +10,81 @@
 
 {% block content %}
 
-{% if form.errors %}
-    {% for error in form.non_field_errors %}
-        <div class="alert alert-danger">
-            <strong>{{ error|escape }}</strong>
-        </div>
-    {% endfor %}
-{% endif %}
-
-<div class="container">
-    <form method="POST">
-        {% csrf_token %}
-        <div class="container">
-            <div class="card z-depth-4">
-                <div class='container center'>
-                    <h4>
-                        {{name_page}}
-                    </h4>
-                </div>
-
-                <div class="container style-form">                       
-                    {{ form|materializecss }} 
-                </div>
-
-                <div class="center text-right">
-                    <a href="/" class="btn-flat btn-secondary text-white" style="color: teal" type="button">
-                        <span class="text">Cancelar</span>
-                    </a>
-                    <button class="btn btn-primary teal" type="submit">
-                        <span class="text">{{name_button}}</span>
-                    </button>
-                </div>
+    {% if form.errors %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
             </div>
-        </div>
-    </form>
-</div>
+        {% endfor %}
+    {% endif %}
 
+    <div class="container">
+        <div class="container">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col s12 m6 offset-m3">
+                    <div class="card">
+                        <div class="card-action teal lighten-1 white-text center color-primary">
+                            <h3>{{name_page}}</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="container style-form">                       
+                                {{ form|materializecss }} 
+                            </div>
+                            
+                            <div class="form-field center">
+                                <p class="center">* Campos obrigatórios.</p>
+                        <div class="center text-right">
+                                    <a href="/" class="btn btn-secondary" type="button">
+                                        <span class="text">voltar</span>
+                                    </a>
+                                    <button class="btn btn-primary" type="submit">
+                                        <span class="text">salvar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% comment %} 
+
+
+    <div class="container">
+        <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="container">
+                    <div class="card z-depth-4">
+                        <div class="pink" style="margin-top:0; margin-left: 0; margin-right:0;">
+                                <div class='container center'>
+                                    <h4>
+                                        {{name_page}}
+                                    </h4>
+                                </div>
+                            <div class="col s12">
+                            </div>
+                        </div>
+                        
+
+                        <div class="container style-form">                       
+                            {{ form|materializecss }} 
+                        </div>
+
+                        <div class="center text-right">
+                            <a href="/" class="btn btn-secondary" type="button">
+                                <span class="text">voltar</span>
+                            </a>
+                            <button class="btn btn-primary" type="submit">
+                                <span class="text">salvar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> {% endcomment %}
 {% endblock %}
