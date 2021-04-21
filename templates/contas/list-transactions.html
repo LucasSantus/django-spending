@@ -4,6 +4,11 @@
 
     <nav class="transparent">
         {% for category in categorys %}
+            <div class="fixed-action-btn">
+                <a href="{% url 'register_transaction' id_category=category.id %}" class="btn-floating btn-large waves-effect waves-light">
+                    <i class="material-icons">add</i>
+                </a>
+            </div>
             <div class="nav-wrapper" style="margin-left: 20px">
                 <div class="col s12">
                     <a href="/" class="breadcrumb"><span>Home</span></a>
@@ -13,50 +18,19 @@
         {% endfor %}
     </nav>
 
-    <div class="fixed-action-btn horizontal">
-        <a class="btn-floating btn-large">
-            <i class="large material-icons">menu</i>
-        </a>
-        <ul class="black-text">
-            <li class="black-text">
-                <a href="{% url 'register_category' %}" class="btn-floating green btn tooltipped black-text" data-position="top" data-tooltip="Cadastrar">
-                    <i class="material-icons">add</i>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="btn-floating yellow btn tooltipped" data-position="top" data-tooltip="Editar">
-                    <i class="material-icons">edit</i>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="btn-floating red btn tooltipped" data-position="top" data-tooltip="Remover">
-                    <i class="material-icons">delete</i>
-                </a>
-            </li>
-        </ul>
-    </div>
-
     <div class="container">
         <div class="s12 m10 l3">
-            {% for categoria in categorias %}
-                <div class="card-panel card-shaper-title center"> 
-                    <span class="white-text">{{ categoria.nome }}</span>
-                </div>
+            
+            {% for category in categorys %}
+               {{ category.name }}
             {% endfor %}
+            
         </div>
     </div>
     <div class="row center">
         <div class="container">
-            {% for transacao in transacoes %}
-                <a href="{% url 'detalhe-transacao' pk=transacao.id %}">
-                    <div class="col s12 m6">
-                        <div class="card-panel card-shaper center">
-                            <span class="white-text">
-                                </br>{{ transacao.nome }}
-                            </span>
-                        </div>
-                    </div>
-                </a>
+            {% for transaction in transactions %}
+                {{ transaction.name }}
             {% endfor %}
         </div>
     </div>

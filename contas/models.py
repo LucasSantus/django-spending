@@ -31,7 +31,6 @@ class Transaction(models.Model):
     
     description = models.TextField(
         verbose_name = "Descrição: ",
-        max_length=200,
     )
     
     date = models.DateTimeField(

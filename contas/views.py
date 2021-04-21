@@ -30,22 +30,26 @@ def register_category(request):
 
     return render(request, 'contas/register-category.html', context)
 
-def register_transaction(request):
+def register_transaction(request, id_category):
+    category = Category.objects.get(pk=id_category)
     form = TransactionForm(request.POST)
     if request.method == "POST":
         form = TransactionForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('index')
+            transacao = form.save(commit=False)
+            transacao.category = category
+            transacao.save()
+            return redirect('list_transaction', id_category)
 
     context = {
         'form': form,
+        'category': category,
     }
 
     return render(request, 'contas/register-transaction.html', context)
 
 def list_transaction(request, id_category):
-    categorys = Category.objects.filter(pk=id_category)
+    categorys = Category.objects.filter(id=id_category)
     transactions = Transaction.objects.filter(category=id_category)
     
     context = {

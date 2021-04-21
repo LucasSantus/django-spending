@@ -16,36 +16,40 @@
     <div class="container">
         <div class="row">
             {% for category in categorys %}
-                <div class="col s12 m6 l4">
-                    <div class="card hoverable small">
-                        <div class="card-content">
-                            <div class="col s12">
-                                <div class="col s12"><span class="card-title left grey-text text-darken-4">{{category.name}}</span></div>
+                <a href="{% url 'list_transaction' id_category=category.id %}">
+                    <div class="col s12 m6 l4">
+                        <div class="card hoverable small">
+                            <div class="card-content" style="padding: 5%;">
+                                <div class="col s12">
+                                    <div class="col s12">
+                                        <span class="card-title left grey-text text-darken-4">{{category.name}}</span>
+                                    </div>
+                                </div>
+                                <span class="card-content grey-text text-darken-4 ">{{category.description|truncatechars:220}}</span>
                             </div>
-                            <span class="card-content grey-text text-darken-4 ">{{category.description|truncatechars:220}}</span>
-                        </div>
-                        <div class="card-action">
-                            <a href="{% url 'list_transaction' id_category=category.id %}" class="left btn-flat">VISUALIZAR</a>
-                            <a class="modal-trigger right" href="#" data-target='modal1'><i id="icon-delete" class="material-icons">delete</i></a>               
-                            <a class="right" href="{% url 'update_category' id_category=category.id %}" data-target='dropdown1'><i id="icon-edit" class="material-icons">edit</i></a>              
+                            <div class="card-action">
+                                <a class="modal-trigger right" href="#" data-target='modal-delete'><i id="icon-delete" class="material-icons">delete</i></a>               
+                                <a class="right" href="{% url 'update_category' id_category=category.id %}" data-target='dropdown1'><i id="icon-edit" class="material-icons">edit</i></a>              
+                            </div>
                         </div>
                     </div>
-                </div>
-
+                </a>
+                
                 <!-- Confirm detele Modal-->
-                <div class="modal fade" id="modal1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                <div class="modal fade" id="modal-delete">
+                 
                         <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Atenção!!</h5>
-                        </div>
-                        <div class="modal-body">Esta é uma ação irreversivel!! tem mesmo a certeza que pretende eliminar esta categoria?</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary modal-close" type="button" data-dismiss="modal">CANCELAR</button>
-                                <a class="btn btn-danger modal-close" href="{% url 'delete_category' id_category=category.id %}">CONFIRMAR</a>
+                            <div class="modal-header">
+                                <h5 class="modal-title">Excluir Categoria:</h5>
+                            </div>
+                            <div class="modal-body">Realmente deseja excluir esta categoria?</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary modal-close" type="button" data-dismiss="modal">CANCELAR</button>
+                                    <a class="btn btn-danger modal-close" href="{% url 'delete_category' id_category=category.id %}">CONFIRMAR</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
             {% endfor %}
         </div>

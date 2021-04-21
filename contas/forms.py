@@ -18,7 +18,7 @@ class CategoryForm(ModelForm):
 class TransactionForm(ModelForm):
     class Meta:
         model = Transaction
-        fields = ('__all__')
+        exclude = ['category']
         
         error_messages = {
             "name":{
@@ -37,9 +37,5 @@ class TransactionForm(ModelForm):
             
             "value":{
                 "required": "Insira o Valor da Transação!",
-            },
-            
-            "category":{
-                "required": "Insira uma Categoria para a Transação!",
             },
         }
