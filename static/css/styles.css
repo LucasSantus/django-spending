@@ -86,3 +86,7 @@ main {
 .style-form{
     padding: 3%;
 }
+
+.col .card .card-action{
+    background-color: #26a69a;
+}

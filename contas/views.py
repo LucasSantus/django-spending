@@ -23,7 +23,7 @@ def register_category(request):
             return redirect('index')
 
     context = {
-        'name_page': "Registrar Categoria",
+        'name_page': "Categoria",
         'name_button': "REGISTRAR",
         'form': form,
     }
