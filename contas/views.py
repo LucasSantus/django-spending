@@ -24,7 +24,6 @@ def register_category(request):
 
     context = {
         'name_page': "Categoria",
-        'name_button': "REGISTRAR",
         'form': form,
     }
 
@@ -42,6 +41,7 @@ def register_transaction(request, id_category):
             return redirect('list_transaction', id_category)
 
     context = {
+        'name_page': "Transação",
         'form': form,
         'category': category,
     }

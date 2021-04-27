@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    Transações | Categoria
+{% endblock %}
+
 {% block content %}
 
     <nav class="transparent">
@@ -20,17 +24,27 @@
 
     <div class="container">
         <div class="s12 m10 l3">
-            
             {% for category in categorys %}
-               {{ category.name }}
+                <h2>{{ category.name }}</h2>
             {% endfor %}
-            
         </div>
     </div>
     <div class="row center">
         <div class="container">
             {% for transaction in transactions %}
-                {{ transaction.name }}
+                <div class="col s12 m7">
+                    <div class="card horizontal">
+                        <div class="card-stacked">
+                            <div class="card-content">
+                            <h5>{{ transaction.name }}</h5>
+                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                            </div>
+                            <div class="card-action">
+                            <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
         </div>
     </div>

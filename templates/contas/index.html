@@ -34,23 +34,23 @@
                         </div>
                     </div>
                 </a>
+            {% endfor %}
                 
+            {% for category in categorys %}
                 <!-- Confirm detele Modal-->
                 <div class="modal fade" id="modal-delete">
-                 
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Excluir Categoria:</h5>
-                            </div>
-                            <div class="modal-body">Realmente deseja excluir esta categoria?</div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary modal-close" type="button" data-dismiss="modal">CANCELAR</button>
-                                    <a class="btn btn-danger modal-close" href="{% url 'delete_category' id_category=category.id %}">CONFIRMAR</a>
-                                </div>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Excluir Categoria:</h5>
+                        </div>
+                        <div class="modal-body">Realmente deseja excluir esta categoria?</div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary modal-close" type="button" data-dismiss="modal">CANCELAR</button>
+                                <a class="btn btn-danger modal-close" href="{% url 'delete_category' id_category=category.id %}">CONFIRMAR</a>
                             </div>
                         </div>
-                    
-                </div>
+                    </div>
+                </div> 
             {% endfor %}
         </div>
     </div>
