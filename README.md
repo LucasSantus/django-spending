@@ -95,3 +95,37 @@ Obrigado por me visitar e boa codificação!
 ### License
 
 Este projeto está licenciado sob a Licença MIT License - veja o [LICENSE.md](https://github.com/LucasSantus/controle-gastos/blob/master/LICENSE) para melhores detalhes.
+
+Tutorial Install Mysql:
+
+> Para instalar o MySQL, atualize o APT:
+
+sudo apt update
+
+> Instalar os cabeçalhos e bibliotecas de desenvolvimento Python e MySQL necessários:
+
+sudo apt install mysql-server python3-dev libmysqlclient-dev default-libmysqlclient-dev
+
+> Execute o script de segurança:
+
+sudo mysql_secure_installation
+
+sudo mysql
+
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+caso tenha um user root já cadastrado!
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password!123';
+
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+sudo mysql -u root
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin!@123';
+
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+
+CREATE DATABASE AACC;
+
+systemctl status mysql.service
