@@ -1,0 +1,89 @@
+
+body {
+    background-color: #e8eae6;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.nav-wrapper .breadcrumb{
+    color: #4db6ac;
+}
+
+.nav-wrapper .breadcrumb::before{
+    color: #4db6ac;
+}
+
+.nav-wrapper .breadcrumb:hover{
+    color: teal;
+}
+
+.btn-floating{
+    background-color: #26a69a;
+}
+
+.btn-floating:hover{
+    background-color: teal;
+}
+
+.card .card-content{
+    padding: 18px;
+}
+
+#icon-edit{
+    color: #42a5f5;
+}
+
+#icon-edit:hover{
+    color: #90caf9;
+}
+
+#icon-delete{
+    color: #ef5350;
+}
+
+#icon-delete:hover{
+    color: #ef9a9a;
+}
+
+.card .card-action {
+    border-top: 1px solid #bdbdbd;
+}
+
+.page-footer .row{
+    width: 90%;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: teal;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
+    color: #80cbc4;
+}
+
+.container .container .card .btn-primary{
+    background-color: #26a69a;
+    margin-bottom: 4px;
+}
+
+.container .container .card .btn-primary:hover{
+    background-color: #4db6ac;
+}
+
+.container .container .card .btn-secondary{
+    background-color: #26a69a;
+    margin-bottom: 4px;
+}
+
+.container .container .card .btn-secondary:hover{
+    background-color: #4db6ac;
+}
+
+.container .container .col .card .card-action{
+    background-color: #26a69a;
+}

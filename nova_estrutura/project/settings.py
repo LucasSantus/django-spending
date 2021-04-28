@@ -11,10 +11,32 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os, sys
+
+#DIZENDO A LOCALIZAÇÃO DAS APPS
+sys.path.append(
+    os.path.join(BASE_DIR, "apps")
+)
+
+#APPS PADRÕES
+INSTALLED_APPS = [
+    'materializecssform',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+#APPS CRIADAS
+INSTALLED_APPS += [
+    'home',
+    'contas',
+]
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -26,18 +48,6 @@ SECRET_KEY = 'y)#nf43ftv_e(zuqymwfz&f#do_xy&fv3qy*fiodhre-6txl3d'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
-# Application definition
-
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,7 +64,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,3 +128,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#DIZENDO ONDE ESTÁ LOCALIZADA A PASTA STATIC
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
