@@ -36,8 +36,7 @@ class Transaction(models.Model):
     )
     
     hour_generated = models.DateTimeField(
-        verbose_name = "Data da Transação",
-        
+        verbose_name = "*Data da Transação",
     )
     
     value = models.DecimalField(

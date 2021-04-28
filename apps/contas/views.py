@@ -19,8 +19,10 @@ def register_category(request):
     return render(request, 'contas/register-category.html', context)
 
 def register_transaction(request, id_category):
+    
     category = Category.objects.get(pk=id_category)
     form = TransactionForm()
+    
     if request.method == "POST":
         form = TransactionForm(request.POST)
         if form.is_valid():

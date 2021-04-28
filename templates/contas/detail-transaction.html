@@ -5,13 +5,11 @@
 {% block content %}
 
 <nav>
-
     {% for transacao in transactions %}
-        <div class="nav-wrapper">
+        <div class="nav-wrapper" style="margin-left: 20px">
             <div class="col s12">
-                <a href="{% url 'index' %}" class="breadcrumb">{{transacao.categoria.nome}}</a>
-                <a href="#" class="breadcrumb">{{transacao.nome}}</a>
-                
+                <a href="{% url 'index' %}" class="breadcrumb">{{transacao.category.name}}</a>
+                <a href="#" class="breadcrumb">{{transacao.name}}</a>
             </div>
         </div>
     {% endfor %}
@@ -21,9 +19,9 @@
     <div class="container">
         <div class="card card-detalhe">
             <div class="container">
-                {% for transacao in transactions %}
-                    Nome: {{ transacao.nome }}<br>
-                    Descrição: {{ transacao.descricao }}
+                {% for transaction in transactions %}
+                    Nome: {{ transaction.name }}<br>
+                    Descrição: {{ transaction.description }}
                 {% endfor %}
             </div>
         </div>
