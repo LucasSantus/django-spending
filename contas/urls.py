@@ -12,7 +12,7 @@ urlpatterns = [
     
     #VISUALIZAR
     path('list-transaction/<int:id_category>/', list_transaction, name='list_transaction'),
-    path('detail-transaction/<int:pk>/', detail_transaction, name='detail_transaction'),
+    path('detail-transaction/<int:id_transaction>/', detail_transaction, name='detail_transaction'),
     
     #ATUALIZAR
     path('update-category/<int:id_category>/', update_category, name='update_category'),

@@ -59,13 +59,11 @@ def list_transaction(request, id_category):
     
     return render(request, 'contas/list-transactions.html', context)
 
-def detail_transaction(request, pk):
+def detail_transaction(request, id_transaction):
     
-    categorys = Category.objects.filter(pk=id_category)
-    transactions = Transaction.objects.filter(pk=pk, category = pk)
+    transactions = Transaction.objects.filter(pk=id_transaction)
     
     context = {
-        'categorys': categorys,
         'transactions': transactions,
     }
     return render(request, 'contas/detail-transaction.html', context)
