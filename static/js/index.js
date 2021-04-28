@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     direction: 'top'
   });
 }); 
+
 // tooltip  
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.tooltipped');

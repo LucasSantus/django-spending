@@ -14,10 +14,11 @@
         </a>
     </div>
     <div class="container">
+        <h3 class="center">Categorias</h3>
         <div class="row">
             {% for category in categorys %}
-                <a href="{% url 'list_transaction' id_category=category.id %}">
-                    <div class="col s12 m6 l4" style="margin-top:20px">
+                {% comment %} <a href="{% url 'list_transaction' id_category=category.id %}"> {% endcomment %}
+                    <div class="col s12 m6 l4">
                         <div class="card hoverable small">
                             <div class="card-content" style="padding: 5%;">
                                 <div class="col s12">
@@ -28,12 +29,14 @@
                                 <span class="card-content grey-text text-darken-4 ">{{category.description|truncatechars:220}}</span>
                             </div>
                             <div class="card-action">
-                                <a class="modal-trigger right" href="#" data-target='modal-delete'><i id="icon-delete" class="material-icons">delete</i></a>               
+                                <a href="{% url 'list_transaction' id_category=category.id %}" class="waves-effect waves-light btn right">VER</a>  
+                                {% comment %} <a class="modal-trigger right" href="#" data-target='modal-delete'><i id="icon-delete" class="material-icons">delete</i></a>               
                                 <a class="right" href="{% url 'update_category' id_category=category.id %}" data-target='dropdown1'><i id="icon-edit" class="material-icons">edit</i></a>              
+                                        {% endcomment %}
                             </div>
                         </div>
                     </div>
-                </a>
+                {% comment %} </a> {% endcomment %}
             {% endfor %}
                 
             {% for category in categorys %}

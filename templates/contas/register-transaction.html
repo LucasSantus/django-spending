@@ -9,6 +9,15 @@
 {% endblock %}
 
 {% block content %}
+<script>
+    $(document).ready(function(){
+        $("#id_hour_generated").attr("type","text"); 
+
+        M.AutoInit();
+
+        var DateField = MaterialDateTimePicker.create($('#id_hour_generated'));
+    }); 
+</script>
 
     {% if form.errors %}
         {% for error in form.non_field_errors %}

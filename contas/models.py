@@ -2,17 +2,18 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(
-        verbose_name = "Nome da Categoria: ", 
+        verbose_name = "*Nome da Categoria", 
         max_length=155,
     )
     
     description = models.TextField(
-        verbose_name = "Descrição: ",
+        verbose_name = "Descrição",
+        null=True,
     )
     
     date_generated = models.DateTimeField(
-        verbose_name = "Data da Criação: ", 
-        auto_now_add=True,
+        verbose_name = "Data da Criação", 
+        auto_now=True,
     )
 
     class Meta:
@@ -25,20 +26,22 @@ class Category(models.Model):
         
 class Transaction(models.Model):
     name = models.CharField(
-        verbose_name = "Nome da Transação: ",
+        verbose_name = "*Nome da Transação",
         max_length=155,
     )
     
     description = models.TextField(
-        verbose_name = "Descrição: ",
+        verbose_name = "Descrição",
+        null=True,
     )
     
-    date = models.DateTimeField(
-        verbose_name = "Data da Transação: ",
+    hour_generated = models.DateTimeField(
+        verbose_name = "Data da Transação",
+        
     )
     
     value = models.DecimalField(
-        verbose_name = "Valor da Transação: ", 
+        verbose_name = "*Valor da Transação", 
         max_digits=7, 
         decimal_places=2,
     )

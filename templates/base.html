@@ -21,17 +21,20 @@
         <!-- Let browser know website is optimized for mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-        <!-- Import JQuery -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+         <!-- Import JQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+        <!-- Import Java Script DateTimePicker -->
+        <script type="text/javascript" src="{% static 'js/materializedatetimepicker.js' %}" defer></script>
 
         <!-- Import Java Script Personalizado -->
-        <script type="text/javascript" src="{% static 'js/index.js' %}" defer></script>
+        <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     
         <!-- Import Java Script -->
-        <script type="text/javascript" src="{% static 'js/materialize.min.js' %}" defer></script>
+        <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
 
         <!-- Import JQuery Mask -->
-        <script type="text/javascript" src="{% static 'js/jquery.mask.min.js' %}" defer></script>
+        {% comment %} <script type="text/javascript" src="{% static 'js/jquery.mask.min.js' %}"></script> {% endcomment %}
 
         <title>
             {% block title %}

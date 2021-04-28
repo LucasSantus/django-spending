@@ -1,4 +1,4 @@
-/* BODY */
+
 body {
     background-color: #e8eae6;
     display: flex;
@@ -9,7 +9,6 @@ body {
 main {
     flex: 1 0 auto;
 }
-
 
 .nav-wrapper .breadcrumb{
     color: #4db6ac;
