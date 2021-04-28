@@ -1,17 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Category, Transaction
 from .forms import CategoryForm, TransactionForm
-import datetime
-
-def index(request):
-    category = Category.objects.all()
-
-    context = {
-        'categorys': category,
-        'date': datetime.datetime.now()
-    }
-
-    return render(request, 'contas/index.html', context)
 
 def register_category(request):
     

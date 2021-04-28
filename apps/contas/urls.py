@@ -1,11 +1,8 @@
 from django.urls import path
 from django.contrib import admin
-from .views import index, register_category, register_transaction, list_transaction, detail_transaction, update_category, update_transaction, delete_category, delete_transaction
+from .views import register_category, register_transaction, list_transaction, detail_transaction, update_category, update_transaction, delete_category, delete_transaction
 
 urlpatterns = [
-    #HOME
-    path('', index, name='index'),
-    
     #CADASTRAR
     path('register-category/', register_category, name="register_category"),
     path('register-transaction/<int:id_category>/', register_transaction, name='register_transaction'),
