@@ -82,25 +82,13 @@ http://127.0.0.1:8000/admin/
 
 --------------------------------------------------------------------------------------
 
-### Autor(es)
- 
-- **Lucas Santos:** [GitHub](https://github.com/LucasSantus)
-
-Siga-me no github!
-
-Obrigado por me visitar e boa codificação!
-
---------------------------------------------------------------------------------------
-
-### License
-
-Este projeto está licenciado sob a Licença MIT License - veja o [LICENSE.md](https://github.com/LucasSantus/controle-gastos/blob/master/LICENSE) para melhores detalhes.
-
-Tutorial Install Mysql:
+### Instalalando o Mysql Server:
 
 > Para instalar o MySQL, atualize o APT:
-
-sudo apt update
+> 
+```
+$ sudo apt update
+```
 
 > Instalar os cabeçalhos e bibliotecas de desenvolvimento Python e MySQL necessários:
 
@@ -129,3 +117,19 @@ GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
 CREATE DATABASE AACC;
 
 systemctl status mysql.service
+
+--------------------------------------------------------------------------------------
+
+### Autor(es)
+ 
+- **Lucas Santos:** [GitHub](https://github.com/LucasSantus)
+
+Siga-me no github!
+
+Obrigado por me visitar e boa codificação!
+
+--------------------------------------------------------------------------------------
+
+### License
+
+Este projeto está licenciado sob a Licença MIT License - veja o [LICENSE.md](https://github.com/LucasSantus/controle-gastos/blob/master/LICENSE) para melhores detalhes.
