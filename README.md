@@ -69,6 +69,115 @@ $ python -m pip install --upgrade pip
 
 $ pip install -r requirements.txt
 ```
+**Instalalando o Mysql Server**
+
+> Para instalar o MySQL, primeiramente atualize o APT:
+
+```
+$ sudo apt update
+```
+
+> Instalar os cabeçalhos e bibliotecas de desenvolvimento Python e MySQL necessários:
+
+```
+$ sudo apt install mysql-server python3-dev libmysqlclient-dev default-libmysqlclient-dev
+```
+
+> Execute o script de segurança, salve a senha escolhida:
+```
+$ sudo mysql_secure_installation
+```
+
+> Feche do Terminal de segurança do Mysql:
+
+```
+$ exit
+```
+
+> Abra o terminal do Mysql:
+
+```
+$ sudo mysql
+```
+
+> Para visualizar os usuários já criados do MySql:
+
+```
+$ SELECT user,authentication_string,plugin,host FROM mysql.user;
+```
+
+> Caso já tenha um usuário root cadastrado:
+
+```
+$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password!123';
+```
+
+> Visualize novamente os usuários criados:
+
+```
+$ SELECT user,authentication_string,plugin,host FROM mysql.user;
+```
+
+> Feche do Terminal do Mysql:
+
+```
+$ exit
+```
+
+> Abra novamente o terminal do Mysql com esse comando:
+
+```
+$ sudo mysql -u root
+```
+
+> Crie um novo usuário Mysql:
+
+> Observação, admin: é o nome do usuário, troque caso prefira.
+> Observação, Admin!@123: é senha do usuário, troque caso prefira.
+
+```
+$ CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin!@123';
+```
+
+> Dê previlégios ao novo usuário:
+
+```
+$ GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+```
+
+> Crie um novo banco de dados:
+```
+$ CREATE DATABASE AACC;
+```
+
+> Feche do Terminal de segurança do Mysql:
+
+```
+$ exit
+```
+
+> Para Visualizar se o MySql Server está ativo:
+
+```
+$ systemctl status mysql.service
+```
+
+**Configurando Settings do Projeto**
+
+> Observação, 'NAME": AACC, o nome do Banco de Dados criado no MySql.
+> Observação, 'USER": admin, o nome do usuário criado no MySql.
+> Observação, 'PASSWORD": Admin!@123, a senha do usuário criado no MySql.
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'AACC',
+        'USER': 'admin',
+        'PASSWORD': 'Admin!@123',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+}
 
 **Preparando o Projeto**
 
@@ -87,6 +196,7 @@ $ python manage.py runserver
 ```
 
 **Visualizando o Projeto**
+
 ```
 http://127.0.0.1:8000/
 ```
@@ -94,6 +204,7 @@ http://127.0.0.1:8000/
 **Acessando o Admin**
 
 Com o projeto rodando, adicione o 'admin/' dps da URL:
+
 ```
 http://127.0.0.1:8000/admin/
 ```
@@ -145,84 +256,6 @@ Adicione 'admin/' há URL:
 ```
 http://127.0.0.1:8000/admin/
 ```
-
---------------------------------------------------------------------------------------
-
-### Instalalando o Mysql Server:
-
-> Para instalar o MySQL, primeiramente atualize o APT:
-
-```
-$ sudo apt update
-```
-
-> Instalar os cabeçalhos e bibliotecas de desenvolvimento Python e MySQL necessários:
-
-```
-$ sudo apt install mysql-server python3-dev libmysqlclient-dev default-libmysqlclient-dev
-```
-
-> Execute o script de segurança, salve a senha escolhida:
-```
-$ sudo mysql_secure_installation
-```
-
-> feche do Terminal de segurança do Mysql:
-
-```
-$ exit
-```
-
-> Abra o terminal do Mysql:
-
-```
-$ sudo mysql
-```
-
-> Para visualizar os usuários já criados do MySql:
-
-```
-$ SELECT user,authentication_string,plugin,host FROM mysql.user;
-```
-
-> Caso já tenha um usuário root cadastrado:
-
-```
-$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password!123';
-```
-
-> Visualie novamente os usuários criados:
-
-```
-$ SELECT user,authentication_string,plugin,host FROM mysql.user;
-```
-
-> feche do Terminal do Mysql:
-
-```
-$ exit
-```
-
-> Abra novamente o terminal do Mysql com esse comando:
-
-```
-$ sudo mysql -u root
-```
-
-> Crie um novo usuário Mysql:
-
-> Observações, : 
-
-```
-$ CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin!@123';
-```
-
-
-GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
-
-CREATE DATABASE AACC;
-
-systemctl status mysql.service
 
 --------------------------------------------------------------------------------------
 
