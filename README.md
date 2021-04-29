@@ -127,7 +127,7 @@ $ exit
 > Abra novamente o terminal do Mysql com esse comando:
 
 ```
-$ sudo mysql -u root
+$ sudo mysql -u root -p
 ```
 
 > Crie um novo usuário Mysql:
