@@ -3,35 +3,53 @@
 {% load static %}
  
 {% block content %}
-
     <nav class="nav-clean">
-    {% for transacao in transactions %}
-        <nav class="nav-extended nav-clean" style="padding-left: 20px;">
-                <div class="nav-wrapper nav-clean">
-                    <h3 class="teal-text text-lighten-1">Detail Transaction</h3>
-                </div>
-                <div class="nav-content">
-                    <div class="col s12">
-                        <a href="/" class="breadcrumb "><span>Dashboard</span></a>
-                        <a href="{% url 'list_transaction' id_category=transacao.category.id %}" class="breadcrumb"><span>{{transacao.category.name}}</span></a>
-                        <a class="grey-text text-lighten-1 breadcrumb">{{transacao.name}}</a> 
+        {% for transacao in transactions %}
+            <nav class="nav-extended nav-clean" style="padding-left: 20px;">
+                    <div class="nav-wrapper nav-clean">
+                        <h3 class="teal-text text-lighten-1">Detail Transaction</h3>
                     </div>
-                </div>
-            </nav>
-    {% endfor %}
+                    <div class="nav-content">
+                        <div class="col s12">
+                            <a href="/" class="breadcrumb "><span>Dashboard</span></a>
+                            <a href="{% url 'list_transaction' id_category=transacao.category.id %}" class="breadcrumb"><span>{{transacao.category.name}}</span></a>
+                            <a class="grey-text text-lighten-1 breadcrumb">{{transacao.name}}</a> 
+                        </div>
+                    </div>
+                </nav>
+        {% endfor %}
     </nav>
-
-<div class="container" style="margin-top:100px">
-    <div class="container">
-        <div class="card card-detalhe">
-            <div class="container">
-                {% for transaction in transactions %}
-                    Nome: {{ transaction.name }}<br>
-                    Descrição: {{ transaction.description }}
-                {% endfor %}
+    <div class="container" style="margin-top:100px">
+        <div class="container">
+            <div class="card card-detalhe">
+                <div class="card-content">
+                    <div class="container">
+                        <div id="id_chips" class="col s12" style="padding: 30px">
+                            <h4 class="center" style="color: rgba(0,0,0,0.7);">Details</h4>
+                            {% for transaction in transactions %}
+                                <div class="chip">
+                                    Name: {{ transaction.name }}
+                                </div>
+                                <div class="chip">
+                                Description: {{ transaction.description }} KJSD FDKGJA HFLADGBVDHVBHJ BDAFVBHDSAJB HVJCABSDVDHCVSBXBXC  DH H HJVCX VJHXCJ V VJ JHVDJ HVJ HBDVHJ BDFJH BFDHJ BD HJBFDHJ BDHJ BFDHJ BD D JKDJ KDV JKSD J DSVJ   SJ J J  DFDJ J DSFJKJ SDFDFJDFDSKSDAJKDSFKKSAFD NDSKJ FF   DS FDSH FDH SFDH
+                                </div>
+                                <div class="chip">
+                                Hour transaction: {{ transaction.hour_generated }}
+                                </div>
+                                <div class="chip">
+                                Value: {{ transaction.value }}
+                                </div>
+                                <div class="chip">
+                                Category: {{ transaction.category }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>                       
+                <div class="card-action" style="height: auto">
+                    <a href="#" class="waves-effect waves-light btn right">DETALHE</a>  
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 {% endblock %}

@@ -46,6 +46,16 @@ main {
 
 /* END FLOATING BUTTON */
 
+
+#id_chips .chip{
+    display:block;
+    border-radius: 2px;
+    font-size: 16px;
+    height: auto;
+    font-weight: bold;
+}
+
+
 .card .card-content{
     padding: 18px;
 }
