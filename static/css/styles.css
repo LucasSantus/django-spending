@@ -1,4 +1,5 @@
 /* START MATERIALIZE FOOTER */
+
 body {
     background-color: #e8eae6;
     display: flex;
@@ -20,26 +21,30 @@ main {
 }
 
 .nav-clean .nav-extended .nav-content .breadcrumb{
-    color: #4db6ac;
+    color: #039be5;;
 }
 
 .nav-clean .nav-extended .nav-content .breadcrumb::before{
-    color: #4db6ac;
+    color: #bdbdbd;
 }
 
 .nav-clean .nav-extended .nav-content .breadcrumb:hover{
-    color: teal;
+    color: #29b6f6;
 }
 
 /* END BREADCRUMB */
+
+/* START FLOATING BUTTON [list-transactions] */
 
 .btn-floating{
     background-color: #26a69a;
 }
 
 .btn-floating:hover{
-    background-color: teal;
+    background-color: #80cbc4;
 }
+
+/* END FLOATING BUTTON */
 
 .card .card-content{
     padding: 18px;

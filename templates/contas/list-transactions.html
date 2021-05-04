@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Transações | Categoria
+    Transactions || Category
 {% endblock %}
 
 {% block content %}
-
-    <nav class="nav-clean" style="margin-left: 20px">
+    <nav class="nav-clean">
         {% for category in categorys %}
             <div class="fixed-action-btn">
                 <a href="{% url 'register_transaction' id_category=category.id %}" class="btn-floating btn-large waves-effect waves-light">
@@ -14,38 +13,39 @@
                 </a>
             </div>
 
-            <nav class="nav-extended nav-clean">
+            <nav class="nav-extended nav-clean" style="padding-left: 20px">
                 <div class="nav-wrapper">
-                    <h4>Transactions</h4>
+                    <h3 class="black-text">Transactions</h3>
                 </div>
                 <div class="nav-content">
                     <div class="col s12">
-                        <a href="/" class="breadcrumb"><span>Home</span></a>
-                        <a href="{% url 'list_transaction' id_category=category.id %}" class="breadcrumb"><span>{{category.name}}</span></a>
+                        <a href="/" class="breadcrumb "><span>Home</span></a>
+                        <a class="breadcrumb"><span class="grey-text text-lighten-1">{{category.name}}</span></a> 
+                        {% comment %} <a href="{% url 'list_transaction' id_category=category.id %}" class="breadcrumb"><span>{{category.name}}</span></a> {% endcomment %}
                     </div>
                 </div>
             </nav>
         {% endfor %}
     </nav>
 
-    <div class="row center">
+    <div class="row center" style="margin-top: 30px">
         <div class="container">
             {% for transaction in transactions %}
                 <div class="col s12 m6 l4">
-                        <div class="card hoverable small">
-                            <div class="card-content" style="padding: 5%;">
+                    <div class="card hoverable small">
+                        <div class="card-content" style="padding: 5%;">
+                            <div class="col s12">
                                 <div class="col s12">
-                                    <div class="col s12">
-                                        <span class="card-title left grey-text text-darken-4">{{transaction.name}}</span>
-                                    </div>
+                                    <span class="card-title left grey-text text-darken-4">{{transaction.name}}</span>
                                 </div>
-                                <span class="card-content grey-text text-darken-4 ">{{transaction.description|truncatechars:220}}</span>
                             </div>
-                            <div class="card-action">
-                                <a href="{% url 'detail_transaction' id_transaction=transaction.id %}" class="waves-effect waves-light btn right">DETALHE</a>  
-                            </div>
+                            <span class="card-content grey-text text-darken-4 ">{{transaction.description|truncatechars:220}}</span>
+                        </div>
+                        <div class="card-action">
+                            <a href="{% url 'detail_transaction' id_transaction=transaction.id %}" class="waves-effect waves-light btn right">DETALHE</a>  
                         </div>
                     </div>
+                </div>
             {% endfor %}
         </div>
     </div>

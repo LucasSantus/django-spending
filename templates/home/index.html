@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-    Home | Categorias
+    Dashboard || Category's
 {% endblock %}
 
 {% block content %}
@@ -13,8 +13,10 @@
             <i class="material-icons">add</i>
         </a>
     </div>
+
+    <h3 class="light-blue-text text-darken-1" style="margin-left: 20px">Category's</h3>
+    
     <div class="container">
-        <h3 class="center">Categorias</h3>
         <div class="row">
             {% for category in categorys %}
                     <div class="col s12 m6 l4">
