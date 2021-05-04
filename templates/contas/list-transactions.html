@@ -15,11 +15,11 @@
 
             <nav class="nav-extended nav-clean" style="padding-left: 20px">
                 <div class="nav-wrapper">
-                    <h3 class="black-text">Transactions</h3>
+                    <h3 class="teal-text text-lighten-1">Transactions</h3>
                 </div>
                 <div class="nav-content">
                     <div class="col s12">
-                        <a href="/" class="breadcrumb "><span>Home</span></a>
+                        <a href="/" class="breadcrumb "><span>Dashboard</span></a>
                         <a class="breadcrumb"><span class="grey-text text-lighten-1">{{category.name}}</span></a> 
                         {% comment %} <a href="{% url 'list_transaction' id_category=category.id %}" class="breadcrumb"><span>{{category.name}}</span></a> {% endcomment %}
                     </div>
@@ -28,7 +28,7 @@
         {% endfor %}
     </nav>
 
-    <div class="row center" style="margin-top: 30px">
+    <div class="row center" style="margin-top: 50px">
         <div class="container">
             {% for transaction in transactions %}
                 <div class="col s12 m6 l4">

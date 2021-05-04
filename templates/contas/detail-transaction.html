@@ -4,18 +4,24 @@
  
 {% block content %}
 
-<nav>
+    <nav class="nav-clean">
     {% for transacao in transactions %}
-        <div class="nav-wrapper" style="margin-left: 20px">
-            <div class="col s12">
-                <a href="{% url 'index' %}" class="breadcrumb">{{transacao.category.name}}</a>
-                <a href="#" class="breadcrumb">{{transacao.name}}</a>
-            </div>
-        </div>
+        <nav class="nav-extended nav-clean" style="padding-left: 20px;">
+                <div class="nav-wrapper nav-clean">
+                    <h3 class="teal-text text-lighten-1">Detail Transaction</h3>
+                </div>
+                <div class="nav-content">
+                    <div class="col s12">
+                        <a href="/" class="breadcrumb "><span>Dashboard</span></a>
+                        <a href="{% url 'list_transaction' id_category=transacao.category.id %}" class="breadcrumb"><span>{{transacao.category.name}}</span></a>
+                        <a class="grey-text text-lighten-1 breadcrumb">{{transacao.name}}</a> 
+                    </div>
+                </div>
+            </nav>
     {% endfor %}
-</nav>
+    </nav>
 
-<div class="container">
+<div class="container" style="margin-top:100px">
     <div class="container">
         <div class="card card-detalhe">
             <div class="container">
