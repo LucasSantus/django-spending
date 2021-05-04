@@ -6,29 +6,28 @@
 
 {% block content %}
 
-    <nav class="transparent">
+    <nav class="nav-clean" style="margin-left: 20px">
         {% for category in categorys %}
             <div class="fixed-action-btn">
                 <a href="{% url 'register_transaction' id_category=category.id %}" class="btn-floating btn-large waves-effect waves-light">
                     <i class="material-icons">add</i>
                 </a>
             </div>
-            <div class="nav-wrapper" style="margin-left: 20px">
-                <div class="col s12">
-                    <a href="/" class="breadcrumb"><span>Home</span></a>
-                    <a href="{% url 'list_transaction' id_category=category.id %}" class="breadcrumb"><span>{{category.name}}</span></a>
+
+            <nav class="nav-extended nav-clean">
+                <div class="nav-wrapper">
+                    <h4>Transactions</h4>
                 </div>
-            </div>
+                <div class="nav-content">
+                    <div class="col s12">
+                        <a href="/" class="breadcrumb"><span>Home</span></a>
+                        <a href="{% url 'list_transaction' id_category=category.id %}" class="breadcrumb"><span>{{category.name}}</span></a>
+                    </div>
+                </div>
+            </nav>
         {% endfor %}
     </nav>
 
-    <div class="container">
-        <div class="s12 m10 l3">
-            {% for category in categorys %}
-                <h2>{{ category.name }}</h2>
-            {% endfor %}
-        </div>
-    </div>
     <div class="row center">
         <div class="container">
             {% for transaction in transactions %}

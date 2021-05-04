@@ -1,4 +1,4 @@
-
+/* START MATERIALIZE FOOTER */
 body {
     background-color: #e8eae6;
     display: flex;
@@ -10,17 +10,28 @@ main {
     flex: 1 0 auto;
 }
 
-.nav-wrapper .breadcrumb{
+/* END MATERIALIZE FOOTER */
+
+/* START BREADCRUMB [list-transactions] */
+
+.nav-clean{
+    background: none;
+    box-shadow: none;
+}
+
+.nav-clean .nav-extended .nav-content .breadcrumb{
     color: #4db6ac;
 }
 
-.nav-wrapper .breadcrumb::before{
+.nav-clean .nav-extended .nav-content .breadcrumb::before{
     color: #4db6ac;
 }
 
-.nav-wrapper .breadcrumb:hover{
+.nav-clean .nav-extended .nav-content .breadcrumb:hover{
     color: teal;
 }
+
+/* END BREADCRUMB */
 
 .btn-floating{
     background-color: #26a69a;
