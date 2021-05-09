@@ -14,9 +14,31 @@
         </a>
     </div>
 
-    <h3 class="teal-text text-lighten-1" style="margin-left: 20px">Category's</h3>
-    
-    <div class="container" style="margin-top: 50px">
+    <div class="container">
+        <h4 class="teal-text text-lighten-1">Category's</h4>
+        <div class="collection z-depth-1">
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider" tabindex="-1"></li>
+                <li><a href="#!">three</a></li>
+                <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+            </ul>
+            {% for category in categorys %}
+                <a href="#!" class="secondary-content dropdown-trigger" data-target='dropdown1' style="margin-right: 4px; margin-top: 4px;">
+                    <i class="material-icons">more_vert</i>
+                </a>
+                <a href="{% url 'list_transaction' id_category=category.id %}" class="collection-item">
+                    <span class="title">{{category.name}}</span>
+                    <p>{{category.description|truncatechars:220}}</p>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% comment %} <div class="container">
         <div class="row">
             {% for category in categorys %}
                     <div class="col s12 m6 l4">
@@ -53,5 +75,5 @@
                 </div> 
             {% endfor %}
         </div>
-    </div>
+    </div> {% endcomment %}
 {% endblock %}
