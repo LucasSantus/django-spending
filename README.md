@@ -179,6 +179,15 @@ DATABASES = {
     }
 }
 
+para exportar um banco de dados mysql:
+mysqldump -u [username] -p [database name] > [database name].sql
+mysqldump -u admin -p AACC > AACC.sql
+
+para importar um banco de dados:
+CREATE DATABASE AACC;
+mysql -u [username] -p newdatabase < [database name].sql
+mysql -u admin -p newdatabase < AACC.sql
+
 **Preparando o Projeto**
 
 ```
