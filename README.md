@@ -1,5 +1,5 @@
 ## Controle de Gastos
-
+<script src="https://gist.github.com/LucasSantus/0aa37aac3d32d9de1376818d53ca302f.js"></script>
 Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqui] (link). Imagens Indisponiveis!
 
 --------------------------------------------------------------------------------------
