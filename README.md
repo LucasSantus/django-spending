@@ -1,5 +1,5 @@
 ## Controle de Gastos
-<script src="https://gist.github.com/LucasSantus/0aa37aac3d32d9de1376818d53ca302f.js"></script>
+
 Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqui] (link). Imagens Indisponiveis!
 
 --------------------------------------------------------------------------------------
@@ -39,21 +39,21 @@ Dentro da pasta onde o projeto ficará armazenado, abra o terminal.
 > **Clonando via SSH:** 
 
 ```
-$ git init
+git init
 
-$ git clone git@github.com:LucasSantus/controle-gastos.git
+git clone git@github.com:LucasSantus/controle-gastos.git
 
-$ cd controle-gastos
+cd controle-gastos
 ```
 
 > **Clonando via HTTPS:**
 
 ```
-$ git init
+git init
 
-$ git clone https://github.com/LucasSantus/controle-gastos.git
+git clone https://github.com/LucasSantus/controle-gastos.git
 
-$ cd controle-gastos
+cd controle-gastos
 ```
 
 **Preparando Ambiente Virtual**
@@ -61,73 +61,73 @@ $ cd controle-gastos
 Com o terminal aberto, digite:
 
 ```
-$ python3 -m venv env
+python3 -m venv env
 
-$ source env/bin/activate
+source env/bin/activate
 
-$ python -m pip install --upgrade pip
+python -m pip install --upgrade pip
 
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 **Instalalando o Mysql Server**
 
 > Para instalar o MySQL, primeiramente atualize o APT:
 
 ```
-$ sudo apt update
+sudo apt update
 ```
 
 > Instalar os cabeçalhos e bibliotecas de desenvolvimento Python e MySQL necessários:
 
 ```
-$ sudo apt install mysql-server python3-dev libmysqlclient-dev default-libmysqlclient-dev
+sudo apt install mysql-server python3-dev libmysqlclient-dev default-libmysqlclient-dev
 ```
 
 > Execute o script de segurança, salve a senha escolhida:
 ```
-$ sudo mysql_secure_installation
+sudo mysql_secure_installation
 ```
 
 > Feche do Terminal de segurança do Mysql:
 
 ```
-$ exit
+exit
 ```
 
 > Abra o terminal do Mysql:
 
 ```
-$ sudo mysql
+sudo mysql
 ```
 
 > Para visualizar os usuários já criados do MySql:
 
 ```
-$ SELECT user,authentication_string,plugin,host FROM mysql.user;
+SELECT user,authentication_string,plugin,host FROM mysql.user;
 ```
 
 > Caso já tenha um usuário root cadastrado:
 
 ```
-$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password!123';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password!123';
 ```
 
 > Visualize novamente os usuários criados:
 
 ```
-$ SELECT user,authentication_string,plugin,host FROM mysql.user;
+SELECT user,authentication_string,plugin,host FROM mysql.user;
 ```
 
 > Feche do Terminal do Mysql:
 
 ```
-$ exit
+exit
 ```
 
 > Abra novamente o terminal do Mysql com esse comando:
 
 ```
-$ sudo mysql -u root -p
+sudo mysql -u root -p
 ```
 
 > Crie um novo usuário Mysql:
@@ -136,30 +136,30 @@ $ sudo mysql -u root -p
 > Observação, Admin!@123: é senha do usuário, troque caso prefira.
 
 ```
-$ CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin!@123';
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin!@123';
 ```
 
 > Dê previlégios ao novo usuário:
 
 ```
-$ GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
 ```
 
 > Crie um novo banco de dados:
 ```
-$ CREATE DATABASE AACC;
+CREATE DATABASE AACC;
 ```
 
 > Feche do Terminal de segurança do Mysql:
 
 ```
-$ exit
+exit
 ```
 
 > Para Visualizar se o MySql Server está ativo:
 
 ```
-$ systemctl status mysql.service
+systemctl status mysql.service
 ```
 
 **Configurando Settings do Projeto**
@@ -191,17 +191,17 @@ mysql -u admin -p newdatabase < AACC.sql
 **Preparando o Projeto**
 
 ```
-$ python manage.py makemigrations contas
+python manage.py makemigrations contas
 
-$ python manage.py migrate
+python manage.py migrate
 
-$ python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 
 **Rodando o Projeto**
 
 ```
-$ python manage.py runserver
+python manage.py runserver
 ```
 
 **Visualizando o Projeto**
@@ -225,29 +225,29 @@ http://127.0.0.1:8000/admin/
 **Preparando Ambiente Virtual**
 
 ```
-$ python -m venv env
+python -m venv env
 
-$ env\Scripts\activate
+env\Scripts\activate
 
-$ python -m pip install --upgrade pip
+python -m pip install --upgrade pip
 
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 **Preparando o Projeto**
 
 ```
-$ python manage.py makemigrations usuarios
+python manage.py makemigrations usuarios
 
-$ python manage.py migrate
+python manage.py migrate
 
-$ python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 
 **Rodando o Projeto**
 
 ```
-$ python manage.py runserver
+python manage.py runserver
 ```
 
 **Acessando o Projeto**
