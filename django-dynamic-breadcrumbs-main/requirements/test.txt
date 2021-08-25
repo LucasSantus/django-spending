@@ -1,0 +1,9 @@
+django
+tox
+
+
+coverage
+mock
+pytz
+unittest-xml-reporting
+coveralls

@@ -24,10 +24,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-#APPS CRIADAS
+#APPS INTERNAS
 INSTALLED_APPS += [
     'home',
     'contas',
+]
+
+#APPS EXTERNAS
+INSTALLED_APPS += [
+    'dynamic_breadcrumbs',
 ]
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -47,7 +52,7 @@ SECRET_KEY = 'y)#nf43ftv_e(zuqymwfz&f#do_xy&fv3qy*fiodhre-6txl3d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,6 +77,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.dynamic_breadcrumbs.context_processors.breadcrumbs',
+                
                 #CONFIGURAÇÃO PARA APARECER O ANO NO TEMPLATE BASE
                 'home.views.base',
             ],
@@ -130,8 +137,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT = 'static/'
 
-#DIZENDO ONDE ESTÁ LOCALIZADA A PASTA STATIC
+# LOCALIZAÇÃO dA PASTA STATIC
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]

@@ -42,7 +42,7 @@ def register_transaction(request, id_category):
 def list_transaction(request, id_category):
     categorys = Category.objects.filter(id=id_category)
     transactions = Transaction.objects.filter(category=id_category)
-    
+
     context = {
         'categorys': categorys,
         'transactions': transactions,

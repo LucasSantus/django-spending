@@ -56,6 +56,12 @@
                     </ul>
                 </div>
             </nav>
+
+            {% if breadcrumbs %}
+                <div class="container">
+                    {% include "dynamic_breadcrumbs/breadcrumbs.html" with breadcrumbs=breadcrumbs %}
+                </div>
+            {% endif %}
             
             <!-- SIDENAV -->
             <ul class="sidenav" id="mobile-demo">
