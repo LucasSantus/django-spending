@@ -9,34 +9,6 @@ body {
 main {
     flex: 1 0 auto;
 }
-/* END MATERIALIZE FOOTER */
-
-/* START BREADCRUMB [list-transactions] */
-.nav-clean{
-    background: none;
-    box-shadow: none;
-}
-.nav-clean .nav-extended .nav-content .breadcrumb{
-    color: #039be5;;
-}
-.nav-clean .nav-extended .nav-content .breadcrumb::before{
-    color: #bdbdbd;
-}
-.nav-clean .nav-extended .nav-content .breadcrumb:hover{
-    color: #29b6f6;
-}
-/* END BREADCRUMB */
-
-
-/* START FLOATING BUTTON [list-transactions] */
-.btn-floating{
-    background-color: #26a69a;
-}
-.btn-floating:hover{
-    background-color: #80cbc4;
-}
-/* END FLOATING BUTTON */
-
 
 #id_chips .chip{
     display:block;
@@ -44,62 +16,4 @@ main {
     font-size: 16px;
     height: auto;
     font-weight: bold;
-}
-
-.card .card-content{
-    padding: 18px;
-}
-
-#icon-edit{
-    color: #42a5f5;
-}
-
-#icon-edit:hover{
-    color: #90caf9;
-}
-
-#icon-delete{
-    color: #ef5350;
-}
-
-#icon-delete:hover{
-    color: #ef9a9a;
-}
-
-.card .card-action {
-    border-top: 1px solid #bdbdbd;
-}
-
-.page-footer .row{
-    width: 90%;
-}
-
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-    color: teal;
-}
-
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
-    color: #80cbc4;
-}
-
-.container .container .card .btn-primary{
-    background-color: #26a69a;
-    margin-bottom: 4px;
-}
-
-.container .container .card .btn-primary:hover{
-    background-color: #4db6ac;
-}
-
-.container .container .card .btn-secondary{
-    background-color: #26a69a;
-    margin-bottom: 4px;
-}
-
-.container .container .card .btn-secondary:hover{
-    background-color: #4db6ac;
-}
-
-.container .container .col .card .card-action{
-    background-color: #26a69a;
 }

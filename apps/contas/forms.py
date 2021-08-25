@@ -8,7 +8,7 @@ class CategoryForm(ModelForm):
         
         error_messages = {
             "name":{
-                "required": "Insira o Nome da Categoria!",
+                "required": "Insira o Título da Categoria!",
             },
             "description":{
                 "required": "Insira a Descrição da Categoria!",
@@ -22,7 +22,7 @@ class TransactionForm(ModelForm):
         
         error_messages = {
             "name":{
-                "required": "Insira o Nome da Transação!",
+                "required": "Insira o Título da Transação!",
             },
 
             "description":{

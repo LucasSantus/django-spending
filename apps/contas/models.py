@@ -2,7 +2,7 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(
-        verbose_name = "*Nome da Categoria", 
+        verbose_name = "Título", 
         max_length=155,
     )
     
@@ -19,14 +19,13 @@ class Category(models.Model):
     class Meta:
         verbose_name = "Categoria"
         verbose_name_plural = "Categorias"
-        db_table = "category"
 
     def __str__(self):
         return self.name
         
 class Transaction(models.Model):
     name = models.CharField(
-        verbose_name = "*Nome da Transação",
+        verbose_name = "Título",
         max_length=155,
     )
     
@@ -36,11 +35,11 @@ class Transaction(models.Model):
     )
     
     hour_generated = models.DateTimeField(
-        verbose_name = "*Data da Transação",
+        verbose_name = "Data da Transação",
     )
     
     value = models.DecimalField(
-        verbose_name = "*Valor da Transação", 
+        verbose_name = "Valor da Transação", 
         max_digits=7, 
         decimal_places=2,
     )
@@ -53,7 +52,6 @@ class Transaction(models.Model):
     class Meta:
         verbose_name = "Transação"
         verbose_name_plural = "Transações"
-        db_table = "transaction"
 
     def __str__(self):
         return self.name

@@ -13,6 +13,6 @@ def index(request):
 
 def base(request):
     context = { 
-    	'date': date.today()
+        'date': date.today()
     }
     return context
