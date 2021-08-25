@@ -16,7 +16,7 @@ def register_category(request):
         'form': form,
     }
 
-    return render(request, 'contas/register-category.html', context)
+    return render(request, 'contas/category/register.html', context)
 
 def update_category(request, id_category):
     category = Category.objects.get(pk=id_category)
@@ -32,7 +32,7 @@ def update_category(request, id_category):
         'category': category,
     }
 
-    return render(request, 'contas/register-category.html', context)
+    return render(request, 'contas/category/register.html', context)
 
 def delete_category(request, id_category):
     category = Category.objects.get(pk=id_category)
