@@ -3,11 +3,10 @@
 {% load static %}
 
 {% block title %}
-    Dashboard || Category's
+    Dashboard
 {% endblock %}
 
 {% block content %}
-
     <div class="fixed-action-btn">
         <a href="{% url 'register_category' %}" class="btn-floating btn-large waves-effect waves-light">
             <i class="material-icons">add</i>
@@ -15,30 +14,6 @@
     </div>
 
     <div class="container">
-        <h4 class="teal-text text-lighten-1">Category's</h4>
-        <div class="collection z-depth-1">
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">one</a></li>
-                <li><a href="#!">two</a></li>
-                <li class="divider" tabindex="-1"></li>
-                <li><a href="#!">three</a></li>
-                <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-                <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-            </ul>
-            {% for category in categorys %}
-                <a href="#!" class="secondary-content dropdown-trigger" data-target='dropdown1' style="margin-right: 4px; margin-top: 4px;">
-                    <i class="material-icons">more_vert</i>
-                </a>
-                <a href="{% url 'list_transaction' id_category=category.id %}" class="collection-item">
-                    <span class="title">{{category.name}}</span>
-                    <p>{{category.description|truncatechars:220}}</p>
-                </a>
-            {% endfor %}
-        </div>
-    </div>
-
-    {% comment %} <div class="container">
         <div class="row">
             {% for category in categorys %}
                     <div class="col s12 m6 l4">
@@ -52,28 +27,27 @@
                                 <span class="card-content grey-text text-darken-4 ">{{category.description|truncatechars:220}}</span>
                             </div>
                             <div class="card-action">
-                                <a href="{% url 'list_transaction' id_category=category.id %}" class="waves-effect waves-light btn right">VER</a>
+                                <a href="{% url 'list_transaction' category.id %}" class="waves-effect waves-light btn right">VER</a>
+                                <a href="#modal-delete{{category.id}}" class="waves-effect waves-light btn right">DELET</a>
                             </div>
                         </div>
                     </div>
-            {% endfor %}
-                
-            {% for category in categorys %}
-                <!-- Confirm detele Modal-->
-                <div class="modal fade" id="modal-delete">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Excluir Categoria:</h5>
-                        </div>
-                        <div class="modal-body">Realmente deseja excluir esta categoria?</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary modal-close" type="button" data-dismiss="modal">CANCELAR</button>
-                                <a class="btn btn-danger modal-close" href="{% url 'delete_category' id_category=category.id %}">CONFIRMAR</a>
+
+                    <!-- Confirm detele Modal-->
+                    <div class="modal fade" id="modal-delete{{category.id}}">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Excluir Categoria:</h5>
+                            </div>
+                            <div class="modal-body">Realmente deseja excluir esta categoria?</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary modal-close" type="button" data-dismiss="modal">CANCELAR</button>
+                                    <a class="btn btn-danger modal-close" href="{% url 'delete_category' category.id %}">CONFIRMAR</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div> 
             {% endfor %}
         </div>
-    </div> {% endcomment %}
+    </div> 
 {% endblock %}

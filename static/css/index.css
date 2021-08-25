@@ -1,4 +1,4 @@
-/* START MATERIALIZE FOOTER */
+/* FOOTER INFERIOR */
 body {
     background-color: #e8eae6;
     display: flex;
@@ -10,10 +10,17 @@ main {
     flex: 1 0 auto;
 }
 
-#id_chips .chip{
-    display:block;
-    border-radius: 2px;
-    font-size: 16px;
-    height: auto;
-    font-weight: bold;
+/* BREADCUMB */
+.breadcrumb:before {
+    content: '\E5CC';
+    color: grey;
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    margin: 0 10px 0 8px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 30px;
 }

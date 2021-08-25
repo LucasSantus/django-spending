@@ -17,9 +17,6 @@
         <!-- Import CSS Personalizado -->
         <link type="text/css" rel="stylesheet" href="{% static 'css/index.css' %}">
 
-        <!-- Import CSS DataTable -->
-        <link rel="stylesheet" href="{% static 'css/datatable/datatables.min.css' %}">
-
         <!-- Import Classes Personalizadas -->
         <link type="text/css" rel="stylesheet" href="{% static 'css/custom-class/class.css' %}">
 
@@ -56,13 +53,16 @@
                     </ul>
                 </div>
             </nav>
-
-            {% if breadcrumbs %}
-                <div class="container">
-                    {% include "dynamic_breadcrumbs/breadcrumbs.html" with breadcrumbs=breadcrumbs %}
-                </div>
-            {% endif %}
             
+            <div class="ms-3 mt-1">
+                <div class="nav-wrapper">
+                    <div class="col s12">
+                        {% block breadcumb %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+
             <!-- SIDENAV -->
             <ul class="sidenav" id="mobile-demo">
                 <li><a href=""><i class="material-icons right">account_circle</i>Perfil</a></li>
@@ -108,9 +108,6 @@
 
         <!-- Import Java Script DateTimePicker -->
         <script type="text/javascript" src="{% static 'js/materialize/datetimepicker.min.js' %}"></script>
-        
-        <!-- Import Java Script Personalizado -->
-        <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
 
         <!-- Import JQuery Mask -->
         <script src="{% static 'js/jquery/jquery.mask.min.js' %}"></script>
@@ -120,12 +117,6 @@
 
         <!-- Import Java Script Materialize -->
         <script type="text/javascript" src="{% static 'js/materialize/materialize.min.js' %}"></script>
-
-        <!-- Import JQuery DataTable -->
-        <script src="{% static 'js/datatable/jquery-datatables.min.js' %}"></script>
-
-        <!-- Import Java Script DataTable -->
-        <script src="{% static 'js/datatable/datatables.min.js' %}"></script>
 
         <!-- Inicialização -->
         <script>

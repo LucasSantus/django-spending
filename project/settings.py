@@ -30,11 +30,6 @@ INSTALLED_APPS += [
     'contas',
 ]
 
-#APPS EXTERNAS
-INSTALLED_APPS += [
-    'dynamic_breadcrumbs',
-]
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -77,7 +72,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'apps.dynamic_breadcrumbs.context_processors.breadcrumbs',
                 
                 #CONFIGURAÇÃO PARA APARECER O ANO NO TEMPLATE BASE
                 'home.views.base',
